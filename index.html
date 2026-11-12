@@ -16,12 +16,19 @@ header{background:linear-gradient(135deg,#4fa8ec,#2b8ad6);color:#fff;padding:22p
 header h1{margin:0;font-size:1.6rem}header p{margin:6px 0 0;opacity:.92;font-size:.95rem}
 main{max-width:980px;margin:-36px auto 40px;padding:0 14px}
 .box{background:var(--card);border-radius:14px;box-shadow:0 4px 18px rgba(30,100,170,.14);padding:14px}
+.ctl{position:sticky;top:8px;z-index:20;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .sr{display:flex;gap:8px}
 input[type=search]{flex:1;min-width:0;font-size:1.05rem;padding:12px 14px;border:2px solid var(--b);border-radius:10px;outline:0}
 input[type=search]:focus{border-color:var(--p)}
 button{font:inherit;cursor:pointer;border:1px solid var(--b);background:var(--pl);color:var(--pd);border-radius:999px;padding:6px 13px}
 button.on{background:var(--p);color:#fff;border-color:var(--p)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips{display:flex;gap:8px;margin-top:12px;padding:2px 2px 6px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;scroll-snap-align:start;display:inline-flex;align-items:center;gap:7px;padding:5px 13px 5px 5px;background:#fff;color:var(--t);border:1px solid var(--b);border-radius:999px;font-size:.88rem;font-weight:500;transition:all .15s}
+.chips button i{font-style:normal;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--pl);color:var(--pd);font-size:.75rem;font-weight:700}
+.chips button:hover{border-color:var(--p);background:#f5faff}
+.chips button.on{background:linear-gradient(135deg,#4fa8ec,#2b8ad6);color:#fff;border-color:transparent;box-shadow:0 3px 10px rgba(43,138,214,.35)}
+.chips button.on i{background:rgba(255,255,255,.25);color:#fff}
 .tabs{display:flex;gap:4px;margin-top:14px;border-bottom:2px solid var(--b)}
 .tabs button{flex:1 1 50%;width:50%;border:0;border-bottom:3px solid transparent;border-radius:10px 10px 0 0;background:none;color:var(--m);font-weight:600;padding:10px 14px;margin-bottom:-2px}
 .tabs button:hover{background:var(--pl)}
@@ -46,6 +53,19 @@ dialog::backdrop{background:rgba(22,50,74,.45)}
 .dh{background:var(--p);color:#fff;padding:16px 18px}.dh .code{display:inline-block;background:#fff;margin-bottom:6px}
 .db{padding:16px 18px;max-height:60vh;overflow:auto}
 .db h4{margin:14px 0 6px;color:var(--pd)}.db .res{margin-bottom:6px}
+.copy{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;padding:8px 18px;font-weight:600;transition:background .25s,color .25s,border-color .25s,transform .15s,box-shadow .25s}
+.copy:hover{background:var(--p);color:#fff;border-color:var(--p);box-shadow:0 3px 10px rgba(43,138,214,.35)}
+.copy:active{transform:scale(.92)}
+.copy .ci{display:inline-block;transition:transform .3s}
+.copy::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.6) 0,transparent 60%);transform:scale(0);opacity:0;pointer-events:none}
+.copy.done{background:#2e9e6b;color:#fff;border-color:#2e9e6b;box-shadow:0 3px 12px rgba(46,158,107,.4)}
+.copy.done::after{animation:rip .6s ease-out}
+.copy.done .ci{animation:pop .45s cubic-bezier(.2,1.6,.4,1)}
+.copy.fail{background:#d9534f;color:#fff;border-color:#d9534f;animation:shake .4s}
+@keyframes rip{0%{transform:scale(0);opacity:1}100%{transform:scale(2.5);opacity:0}}
+@keyframes pop{0%{transform:scale(0) rotate(-90deg)}100%{transform:scale(1) rotate(0)}}
+@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+@media(prefers-reduced-motion:reduce){.copy,.copy *{animation:none!important;transition:none!important}}
 .x{float:right;background:#fff3;color:#fff;border:0}
 @media(max-width:520px){header h1{font-size:1.25rem}.code{min-width:52px}}
 </style>
@@ -53,7 +73,7 @@ dialog::backdrop{background:rgba(22,50,74,.45)}
 <body>
 <header><h1>Plan Comptable Général 2005</h1><p>Madagascar · Recherche par code ou par libellé</p></header>
 <main>
-<div class="box">
+<div class="box ctl">
   <div class="sr"><input id="q" type="search" placeholder="Ex. 4457, 512, « capital », « fournisseurs »…" autocomplete="off" autofocus></div>
   <div class="chips" id="cls"></div>
   <div class="tabs" role="tablist" aria-label="Mode d'affichage">
@@ -120,6 +140,19 @@ function renderTree(list,q){
   $('cnt').textContent='Arborescence hiérarchique';
   $('out').innerHTML=`<div class="box tree"><ul>${html||'<div class="empty">Aucun compte trouvé.</div>'}</ul></div>`;
 }
+async function copyCode(btn,c){
+  const o=byId.get(c),txt=o.code+' - '+o.label;
+  const ic=btn.querySelector('.ci'),tx=btn.querySelector('.ct');
+  let ok=true;
+  try{await navigator.clipboard.writeText(txt)}catch(e){
+    try{const t=document.createElement('textarea');t.value=txt;t.style.position='fixed';t.style.opacity=0;document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}catch(_){ok=false}
+  }
+  btn.classList.remove('done','fail');void btn.offsetWidth;
+  btn.classList.add(ok?'done':'fail');
+  ic.textContent=ok?'✓':'✕';tx.textContent=ok?'Copié !':'Échec';
+  clearTimeout(btn._t);
+  btn._t=setTimeout(()=>{btn.classList.remove('done','fail');ic.textContent='⧉';tx.textContent='Copier'},1800);
+}
 function detail(c){
   const o=byId.get(c);if(!o)return;
   const d=$('dlg');
@@ -127,7 +160,7 @@ function detail(c){
   <div class="db"><div class="path">${esc(path(o).map(x=>x.code+' '+x.label).join(' › '))||'Classe '+o.code}</div>
   ${o.parent?`<h4>Compte parent</h4><ul>${item(o.parent,[],'')}</ul>`:''}
   <h4>Sous-comptes (${o.kids.length})</h4>${o.kids.length?'<ul>'+o.kids.map(k=>item(k,[],'')).join('')+'</ul>':'<div class="path">Aucun sous-compte.</div>'}
-  <p style="text-align:right"><button onclick="navigator.clipboard&&navigator.clipboard.writeText('${o.code} - '+byId.get('${o.code}').label)">Copier</button></p></div>`;
+  <p style="text-align:right"><button class="copy" onclick="copyCode(this,'${o.code}')"><span class="ci">⧉</span><span class="ct">Copier</span></button></p></div>`;
   d.showModal();
 }
 document.addEventListener('click',e=>{
@@ -153,7 +186,7 @@ document.querySelector('.tabs').addEventListener('keydown',e=>{
 });
 $('vT').tabIndex=-1;
 function chips(){
-  $('cls').innerHTML=['<button data-k="0" class="on">Toutes</button>'].concat(Object.entries(CLASSES).map(([k,v])=>`<button data-k="${k}">${k} · ${v}</button>`)).join('');
+  $('cls').innerHTML=['<button data-k="0" class="on"><i>☰</i>Toutes</button>'].concat(Object.entries(CLASSES).map(([k,v])=>`<button data-k="${k}"><i>${k}</i>${v}</button>`)).join('');
   $('cls').onclick=e=>{const b=e.target.closest('button');if(!b)return;cls=+b.dataset.k;
     $('cls').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));search()};
 }
