@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PCG 2005 – Madagascar</title>
+<meta name="theme-color" content="#2b8ad6">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 <style>
 :root{--bg:#eaf4fd;--card:#fff;--p:#2b8ad6;--pd:#1766ad;--pl:#d6eafb;--t:#16324a;--m:#5f7b93;--b:#c3dcf2}
 *{box-sizing:border-box}
@@ -158,7 +162,14 @@ $('cnt').textContent='Chargement des données…';
 fetch(URL_).then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{
   build(j,null);tree=flat.filter(o=>!o.parent);search();
 }).catch(()=>{$('cnt').textContent='';
-  $('out').innerHTML='<div class="empty">Impossible de charger les données depuis GitHub. Vérifiez votre connexion et rechargez la page.</div>'});
+  $('out').innerHTML='<div class="empty">Impossible de charger les données. Connectez-vous à Internet pour le premier chargement, puis réessayez.</div>'});
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('./service-worker.js').catch(error=>{
+      console.error('Échec de l’enregistrement du service worker:',error);
+    });
+  });
+}
 </script>
 </body>
 </html>
