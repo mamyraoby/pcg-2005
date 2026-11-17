@@ -2,1808 +2,2260 @@
   label: Compte de capitaux
   parent: null
   children:
-    - id: 10
-      label: 'Capital, réserves et assimilés'
-      parent: 1
+  - id: 10
+    label: Capital, réserves et assimilés
+    parent: 1
+    description: |-
+      Ce compte est subdivisé en sous comptes différents selon la forme juridique sous laquelle s'exerce l'activité de l'entité :
+      - capital (social ou individuel selon la forme juridique de l'entité) ;
+      - compte de l'exploitant ;
+      - capital non appelé ;
+      - actions propres (auto contrôle) ;
+      - réserves (légale, statutaire, ordinaire) ;
+      - écarts d'évaluation. Les apports et les bénéfices accumulés sont enregistrés dans les conditions suivantes :
+      • Comptes à l'usage de l'exploitant individuel Le sous compte " Capital individuel " enregistre à son crédit :
+      . la valeur des apports de l'entrepreneur au début ou en cours d'activité,
+      . le bénéfice de l'exercice précédent (par le débit du compte 12 - " Résultat de l'exercice "). Il enregistre à son débit :
+      . les prélèvements de toute nature,
+      . la perte de l'exercice précédent (par le crédit du compte 12). Les apports ou les retraits personnels de l'exploitant et, le cas échéant, l'enregistrement de la rémunération " normale " attachée à son travail sont enregistrés au cours de l'exercice dans un compte dénommé " Compte de l'exploitant ". A l'ouverture de l'exercice suivant, le solde de ce compte est viré au compte " Capital individuel ".
+      • Comptes à l'usage des sociétés de capitaux Dans les sociétés privées, le capital représente la valeur nominale des actions ou des parts sociales. Dans les sociétés publiques, le capital représente la contrepartie des apports en nature ou en espèces effectués par l'Etat ou les collectivités publiques et dont le remboursement n'est pas prévu par une convention.
+      Le sous compte "Capital social" enregistre à son crédit le montant du capital figurant dans l'acte de société. Il retrace l'évolution de ce montant au cours de la vie de la société suivant les décisions des organes compétents.
+      Il est crédité lors de l'augmentation du capital :
+      . du montant des apports en espèces ou en nature effectués par les associés (sous déduction des primes liées au capital social, celles-ci étant enregistrées au crédit d'une subdivision distincte du compte "capital et réserves ") ;
+      . du montant des réserves. Il est débité des réductions de capital, quelle qu'en soit la cause (absorption des pertes, remboursement aux associés, …).
+      En cas d'appel fractionné du capital social, la quote-part non appelée est inscrite au compte "Capital social" par le débit d'un compte "Capital non appelé " (subdivision également du compte 10 "Capital et réserves").
+      Le solde débiteur de ce compte "Capital non appelé " représente la créance de la société sur les associés et figure sous une rubrique particulière à l'actif du bilan.
+      Les actions rachetées par l'entreprise en vue d'être annulées, d'être conservées ou de permettre la régularisation des cours boursiers doivent être présentées au bilan sur une rubrique particulière, en déduction des capitaux propres, pour leur valeur d'acquisition. Leur acquisition est comptabilisée dans les états financiers comme une variation des capitaux propres, et est enregistrée au débit d'un compte " Actions propres ", subdivision du compte 10 " Capital et réserves ".
+      Les réserves à inscrire au crédit des subdivisions du compte 10 " Capital et réserves " sont, en principe, des bénéfices affectés durablement à l'entité jusqu'à décision contraire des organes compétents.
+      Ces comptes de réserves sont débités des incorporations au capital, des distributions aux associés, des prélèvements pour l'apurement des pertes,…
+      Les sous-comptes écart d'évaluation enregistrent les écarts dégagés lors d'une évaluation d'un actif à sa juste valeur, dans le cas où la réglementation prévoit l'enregistrement de ces écarts directement en capitaux propres et non dans des comptes de résultat.
+    children:
+    - id: 101
+      label: Capital
+      parent: 10
       children:
-        - id: 101
-          label: Capital
-          parent: 10
-          children:
-            - id: 1011
-              label: Capital souscrit - non appelé
-              parent: 101
-            - id: 1012
-              label: Capital souscrit - appelé non versé
-              parent: 101
-            - id: 1013
-              label: Capital souscrit - appelé versé
-              parent: 101
-        - id: 104
-          label: Primes liés au capital social
-          parent: 10
-          children:
-            - id: 1041
-              label: Primes d'émission
-              parent: 104
-            - id: 1042
-              label: Primes de fusion
-              parent: 104
-            - id: 1043
-              label: Primes d'apport
-              parent: 104
-            - id: 1044
-              label: Primes de conversion d'obligation en actions
-              parent: 104
-        - id: 105
-          label: Ecart d'évaluation
-          parent: 10
-          children:
-            - id: 1052
-              label: Ecart de réévaluation libre
-              parent: 105
-            - id: 1058
-              label: Autre Ecart de réévaluation à l'étranger
-              parent: 105
-        - id: 106
-          label: Réserves
-          parent: 10
-          children:
-            - id: 1061
-              label: Réserve légale
-              parent: 106
-            - id: 1062
-              label: Réserve facultatives
-              parent: 106
-            - id: 1063
-              label: Réserve statuaires ou contractuelles
-              parent: 106
-            - id: 1064
-              label: Réserve réglementées
-              parent: 106
-            - id: 1068
-              label: Autres réserves
-              parent: 106
-        - id: 107
-          label: Ecart d'équivalence
-          parent: 10
-        - id: 108
-          label: Compte d'éxploitant
-          parent: 10
-        - id: 109
-          label: 'Actionnaire, capitale souscrit non appelé'
-          parent: 10
-    - id: 11
-      label: Report à nouveau
-      parent: 1
+      - id: 1011
+        label: Capital souscrit - non appelé
+        parent: 101
+      - id: 1012
+        label: Capital souscrit - appelé non versé
+        parent: 101
+      - id: 1013
+        label: Capital souscrit - appelé versé
+        parent: 101
+    - id: 104
+      label: Primes liés au capital social
+      parent: 10
       children:
-        - id: 110
-          label: Report à nouveau solde créditeur
-          parent: 11
-        - id: 111
-          label: Report à nouveau solde débiteur
-          parent: 11
-    - id: 12
-      label: Résultat de l'execrice
-      parent: 1
+      - id: 1041
+        label: Primes d'émission
+        parent: 104
+      - id: 1042
+        label: Primes de fusion
+        parent: 104
+      - id: 1043
+        label: Primes d'apport
+        parent: 104
+      - id: 1044
+        label: Primes de conversion d'obligation en actions
+        parent: 104
+    - id: 105
+      label: Ecart d'évaluation
+      parent: 10
       children:
-        - id: 120
-          label: Résultat de l'exercice (bénéfice)
-          parent: 12
-        - id: 128
-          label: Résultat en instance d'affectation
-          parent: 12
-        - id: 129
-          label: Résultat de l'exercice (perte)
-          parent: 12
-    - id: 13
-      label: Produits et charges différés - hors cycle d'exploitation
-      parent: 1
+      - id: 1052
+        label: Ecart de réévaluation libre
+        parent: 105
+      - id: 1058
+        label: Autre Ecart de réévaluation à l'étranger
+        parent: 105
+    - id: 106
+      label: Réserves
+      parent: 10
       children:
-        - id: 131
-          label: Subventions d'équipement
-          parent: 13
-          children:
-            - id: 1311
-              label: Etat
-              parent: 131
-            - id: 1312
-              label: Région
-              parent: 131
-            - id: 1313
-              label: Département
-              parent: 131
-            - id: 1314
-              label: Communes
-              parent: 131
-            - id: 1315
-              label: Collectivités publiques
-              parent: 131
-            - id: 1316
-              label: Entreprises publiques
-              parent: 131
-            - id: 1317
-              label: Entreprises et organismes privés
-              parent: 131
-            - id: 1318
-              label: Autres
-              parent: 131
-        - id: 132
-          label: Autres subventions d'investissement
-          parent: 13
-        - id: 133
-          label: Impôts différés actifs
-          parent: 13
-        - id: 134
-          label: Impôts différés passifs
-          parent: 13
-        - id: 138
-          label: Autres produits et charges différés
-          parent: 13
-    - id: 14
-      label: null
-      parent: 1
-    - id: 15
-      label: Provisions pour charges - Passifs non courants
-      parent: 1
+      - id: 1061
+        label: Réserve légale
+        parent: 106
+      - id: 1062
+        label: Réserve facultatives
+        parent: 106
+      - id: 1063
+        label: Réserve statuaires ou contractuelles
+        parent: 106
+      - id: 1064
+        label: Réserve réglementées
+        parent: 106
+      - id: 1068
+        label: Autres réserves
+        parent: 106
+    - id: 107
+      label: Ecart d'équivalence
+      parent: 10
+    - id: 108
+      label: Compte d'éxploitant
+      parent: 10
+    - id: 109
+      label: Actionnaire, capitale souscrit non appelé
+      parent: 10
+  - id: 11
+    label: Report à nouveau
+    parent: 1
+    description: La partie du résultat (bénéficiaire ou déficitaire) dont l'affectation a été renvoyée par l'assemblée générale à une décision d'affectation définitive ultérieure s'enregistre au compte 11 "Report à nouveau" (solde créditeur en cas de report à nouveau bénéficiaire, solde débiteur en cas de report à nouveau déficitaire).
+    children:
+    - id: 110
+      label: Report à nouveau solde créditeur
+      parent: 11
+    - id: 111
+      label: Report à nouveau solde débiteur
+      parent: 11
+  - id: 12
+    label: Résultat de l'execrice
+    parent: 1
+    description: |-
+      Le compte 12 enregistre pour solde les comptes de charges et les comptes de produits de l'exercice. Le solde du compte 12 représente un bénéfice (ou excédent) si les produits sont d'un montant supérieur aux charges (solde créditeur) ou une perte (ou déficit) dans le cas contraire (solde débiteur).
+      Dans les sociétés, le compte 12 est soldé selon la décision juridique d'affectation du résultat prise par l'organe compétent.
+      Dans les entités individuelles, le compte 12 est viré au compte " Capital individuel " (compte 10) au premier jour de l'ouverture de l'exercice qui suit celui de sa réalisation.
+    children:
+    - id: 120
+      label: Résultat de l'exercice (bénéfice)
+      parent: 12
+    - id: 128
+      label: Résultat en instance d'affectation
+      parent: 12
+    - id: 129
+      label: Résultat de l'exercice (perte)
+      parent: 12
+  - id: 13
+    label: Produits et charges différés - hors cycle d'exploitation
+    parent: 1
+    description: |-
+      Sont généralement inscrits au crédit de ces comptes :
+      - les subventions d'équipement ;
+      - les autres subventions d'investissement ;
+      - les impôts différés passifs.
+      Sont généralement inscrits au débit de ces comptes :
+      - les impôts différés actifs.
+      Les subventions d'équipement sont des subventions dont bénéficie l'entité en vue d'acquérir ou de créer des biens déterminés.
+      Ces comptes sont crédités du montant de la subvention accordée par le débit d'un compte :
+      - classe 2, lorsque la subvention correspond à un transfert gratuit d'immobilisations à l'entité ;
+      - classe 4, compte de tiers (financement en attente), lorsque la subvention donne lieu à un mouvement financier.
+      Les autres subventions d'investissement correspondent à des subventions dont bénéficie l'entité pour financer ses activités à long terme : implantation à l'étranger, prospection d'un nouveau marché…
+      Les subventions d'investissement font l'objet d'une reprise annuelle selon les modalités prévues par le présent Plan Comptable Général. Seul figure au bilan le montant net de la subvention non encore inscrite au compte de résultat.
+    children:
+    - id: 131
+      label: Subventions d'équipement
+      parent: 13
       children:
-        - id: 153
-          label: Provisions pour pensions et obligations similaires
-          parent: 15
-        - id: 155
-          label: Provision pour impôts
-          parent: 15
-        - id: 156
-          label: Provision pour renouvellements des immobilisations (concession)
-          parent: 15
-        - id: 158
-          label: Autres provisions pour charges-passifs non courants
-          parent: 15
-    - id: 16
-      label: Emprunts et dettes assimilés
-      parent: 1
+      - id: 1311
+        label: Etat
+        parent: 131
+      - id: 1312
+        label: Région
+        parent: 131
+      - id: 1313
+        label: Département
+        parent: 131
+      - id: 1314
+        label: Communes
+        parent: 131
+      - id: 1315
+        label: Collectivités publiques
+        parent: 131
+      - id: 1316
+        label: Entreprises publiques
+        parent: 131
+      - id: 1317
+        label: Entreprises et organismes privés
+        parent: 131
+      - id: 1318
+        label: Autres
+        parent: 131
+    - id: 132
+      label: Autres subventions d'investissement
+      parent: 13
+    - id: 133
+      label: Impôts différés actifs
+      parent: 13
+    - id: 134
+      label: Impôts différés passifs
+      parent: 13
+    - id: 138
+      label: Autres produits et charges différés
+      parent: 13
+  - id: 14
+    label: null
+    parent: 1
+  - id: 15
+    label: Provisions pour charges - Passifs non courants
+    parent: 1
+    description: |-
+      Sont enregistrées distinctement au crédit de ce compte :
+      - les provisions non courantes pour charges ;
+      - les provisions pour engagements de retraite.
+      Lors de la constitution d'une provision non courante pour charges, le compte de provision est crédité par le débit d'un compte de dotations, soit d'exploitation, soit financières.
+      Lors de la survenance de la charge, la provision pour charges antérieurement constituée est soldée par le crédit d'un compte de reprise (78). Corrélativement, la charge intervenue est inscrite au compte intéressé de la classe 6.
+      Le compte de provision pour charges est réajusté, en tout état de cause, à la fin de chaque exercice par :
+      - le débit des comptes de dotations correspondants, lorsque le montant de la provision doit être augmenté ;
+      - le crédit d'un compte 78 de reprise (produit), de même niveau que celui utilisé pour la dotation, lorsque le montant de la provision doit être diminué ou annulé (provision devenue, en tout ou partie, sans objet).
+    children:
+    - id: 153
+      label: Provisions pour pensions et obligations similaires
+      parent: 15
+    - id: 155
+      label: Provision pour impôts
+      parent: 15
+    - id: 156
+      label: Provision pour renouvellements des immobilisations (concession)
+      parent: 15
+    - id: 158
+      label: Autres provisions pour charges-passifs non courants
+      parent: 15
+  - id: 16
+    label: Emprunts et dettes assimilés
+    parent: 1
+    description: |-
+      Spécificités communes à ces deux catégories de compte : L'utilisation de ces comptes est limitée aux opérations financières, à l'exclusion des opérations commerciales portés au passif du bilan, en distinguant :
+      - les opérations qui relèvent des passifs courants et celles qui relèvent des passifs non courants ;
+      - les opérations portant intérêts et celles ne portant pas intérêts.
+      Ces comptes peuvent également être subdivisés, sur l'initiative de l'entreprise, en distinguant :
+      - les opérations faites localement et celles réalisées à l'étranger ;
+      - les opérations réalisées en monnaie nationale et celles réalisées en devises.
+      A la clôture de l'exercice, les intérêts courus non échus relatifs à ces emprunts et dettes sont inscrits dans des subdivisions de chacun des comptes de dettes visées.
+      Les remboursements en capital de ces emprunts et dettes sont enregistrés au débit de chacun des comptes concernés, en contrepartie des comptes de tiers ou de trésorerie utilisés.
+      Les emprunts sont comptabilisés à leur coût, qui correspond à la juste valeur de la contrepartie reçue, après déduction éventuelle des frais d'émission et hors éventuelles primes d'émission et de remboursement. Les primes d'émission et de remboursement ainsi que les frais sur emprunts sont comptabilisés au bilan au compte emprunt correspondant de manière progressive sur la durée de l'emprunt. Cet amortissement est déterminé selon un calcul actuariel et enregistré au débit d'un compte de dotations financières. La dette inscrite en contrepartie de la disposition d'un actif pris par un contrat de location financement ainsi que les dépôts et cautionnements reçus figurent également dans des subdivisions de ce compte 16 " Emprunts et dettes assimilés ". A la clôture de l'exercice, les frais courus non échus relatifs à ces emprunts (intérêts, dotations correspondant à l'amortissement des primes d'émission, primes de remboursement et frais d'émission) sont inscrits dans des subdivisions de chacun des comptes de dettes visées. Les remboursements en capital de l'ensemble de ces emprunts et dettes sont enregistrés au débit de chacun des comptes visés, en contrepartie des comptes de tiers ou de trésorerie utilisés.
+    children:
+    - id: 161
+      label: Emprunts obligatoires conveertibles
+      parent: 16
+    - id: 163
+      label: Autres emprunts obligatoires
+      parent: 16
+    - id: 164
+      label: Emprunts auprès des établissements reçus
+      parent: 16
+    - id: 167
+      label: Dettes sur contrat de location - Financement
+      parent: 16
+    - id: 168
+      label: Autre emprunts et dettes assimilés
+      parent: 16
       children:
-        - id: 161
-          label: Emprunts obligatoires conveertibles
-          parent: 16
-        - id: 163
-          label: Autres emprunts obligatoires
-          parent: 16
-        - id: 164
-          label: Emprunts auprès des établissements reçus
-          parent: 16
-        - id: 167
-          label: Dettes sur contrat de location - Financement
-          parent: 16
-        - id: 168
-          label: Autre emprunts et dettes assimilés
-          parent: 16
-          children:
-            - id: 1681
-              label: Autres emprunts
-              parent: 168
-            - id: 1688
-              label: Intérêts courus
-              parent: 168
-        - id: 169
-          label: Primes de remboursements des obligations
-          parent: 16
-    - id: 17
-      label: Dettes rattachées à des participations
-      parent: 1
+      - id: 1681
+        label: Autres emprunts
+        parent: 168
+      - id: 1688
+        label: Intérêts courus
+        parent: 168
+    - id: 169
+      label: Primes de remboursements des obligations
+      parent: 16
+  - id: 17
+    label: Dettes rattachées à des participations
+    parent: 1
+    description: |-
+      Spécificités communes à ces deux catégories de compte : L'utilisation de ces comptes est limitée aux opérations financières, à l'exclusion des opérations commerciales portés au passif du bilan, en distinguant :
+      - les opérations qui relèvent des passifs courants et celles qui relèvent des passifs non courants ;
+      - les opérations portant intérêts et celles ne portant pas intérêts.
+      Ces comptes peuvent également être subdivisés, sur l'initiative de l'entreprise, en distinguant :
+      - les opérations faites localement et celles réalisées à l'étranger ;
+      - les opérations réalisées en monnaie nationale et celles réalisées en devises.
+      A la clôture de l'exercice, les intérêts courus non échus relatifs à ces emprunts et dettes sont inscrits dans des subdivisions de chacun des comptes de dettes visées.
+      Les remboursements en capital de ces emprunts et dettes sont enregistrés au débit de chacun des comptes concernés, en contrepartie des comptes de tiers ou de trésorerie utilisés.
+      Il est courant de distinguer par des subdivisions spécifiques :
+      - les dettes rattachées à des participations groupe (filiales ou entreprises associées) ;
+      - les dettes rattachées à des participations hors groupe.
+    children:
+    - id: 171
+      label: Dettes rattachées à des participations groupe
+      parent: 17
+    - id: 172
+      label: Dettes rattachées à des participations hors groupe
+      parent: 17
+    - id: 173
+      label: Dettes rattachées à des sociétés en participation
+      parent: 17
+    - id: 178
+      label: Autres dettes rattachées à des participations
+      parent: 17
       children:
-        - id: 171
-          label: Dettes rattachées à des participations groupe
-          parent: 17
-        - id: 172
-          label: Dettes rattachées à des participations hors groupe
-          parent: 17
-        - id: 173
-          label: Dettes rattachées à des sociétés en participation
-          parent: 17
-        - id: 178
-          label: Autres dettes rattachées à des participations
-          parent: 17
-          children:
-            - id: 1781
-              label: Principal
-              parent: 178
-            - id: 1788
-              label: Intérêts courus
-              parent: 178
-    - id: 18
-      label: Comptes de liaison des établissements etsociétés en participation
-      parent: 1
-      children:
-        - id: 181
-          label: Comptes de liaison entre établissements
-          parent: 18
-        - id: 188
-          label: Comptes de liaison entre sociétés en participation
-          parent: 18
-    - id: 19
-      label: null
-      parent: 1
+      - id: 1781
+        label: Principal
+        parent: 178
+      - id: 1788
+        label: Intérêts courus
+        parent: 178
+  - id: 18
+    label: Comptes de liaison des établissements etsociétés en participation
+    parent: 1
+    description: Le compte 18 est à la disposition des entités pour recevoir, en cours d'exercice, les opérations effectuées entre établissements et avec des sociétés en participation. Il est obligatoirement soldé à la clôture de l'exercice.
+    children:
+    - id: 181
+      label: Comptes de liaison entre établissements
+      parent: 18
+    - id: 188
+      label: Comptes de liaison entre sociétés en participation
+      parent: 18
+  - id: 19
+    label: null
+    parent: 1
 - id: 2
   label: Comptes d'immobilisations
   parent: null
   children:
-    - id: 20
-      label: Immobilisations incorporelles
-      parent: 2
+  - id: 20
+    label: Immobilisations incorporelles
+    parent: 2
+    description: |-
+      Une subdivision du compte 20 enregistre à son débit les frais de développement qui doivent être inscrits à l'actif dans les conditions fixées par le présent Plan Comptable Général, en contrepartie d'un compte 72 " Production immobilisée d'actif incorporel " (après enregistrement des charges les concernant dans les comptes par nature).
+      Lorsque les frais de développement sont totalement amortis (au terme du délai prévu ou par un amortissement accéléré du fait de l'échec des projets visés), le compte " Amortissements des frais de développement " (subdivision du compte 28 " Amortissements ") est débité en contrepartie du compte " Frais de développement ". Une subdivision du compte 20 " Logiciels informatiques et assimilés " est débitée :
+      - du coût d'acquisition des licences se rapportant à l'utilisation de logiciels (dissociés du matériel) en contrepartie directement des comptes de tiers ou des comptes d'instruments de trésorerie et assimilés ; ou
+      - du coût de production des logiciels créés en contrepartie d'un compte " Production immobilisée d'actif incorporel " subdivision du compte 72 (après enregistrement des charges les concernant dans les comptes par nature). Les autres éléments d'actif non courants incorporels s'enregistrent directement dans des subdivisions du compte 20 (en contrepartie des comptes de tiers ou des comptes d'instruments de trésorerie et assimilés) :
+      - concessions et droits similaires, brevets, licences, marques, procédés, droits et valeurs similaires ;
+      - fonds commercial ;
+      - autres immobilisations incorporelles (droit au bail, ….). Les profits ou les pertes provenant de la mise hors service ou de la sortie d'une immobilisation incorporelle sont déterminés par différence entre les produits de sortie nets estimés et la valeur comptable de l'actif, et sont comptabilisés en produits ou en charges dans le compte de résultat dans les comptes 65 (subdivision pertes sur sorties d'actifs immobilisés) ou 75 (subdivision profits sur sorties d'actifs immobilisés).
+    children:
+    - id: 203
+      label: Frais de développement immobilisables
+      parent: 20
+    - id: 204
+      label: Logiciels informatiques et assimilés
+      parent: 20
+    - id: 205
+      label: Concenssions et droits similaires, brevets, licences, marques
+      parent: 20
+    - id: 207
+      label: Fonds commercial
+      parent: 20
+    - id: 208
+      label: Autres immobilisations incorporelles
+      parent: 20
+  - id: 21
+    label: Immobilisations corporelles
+    parent: 2
+    description: |-
+      Les comptes d'immobilisations corporelles sont débités à la date de leur prise de contrôle par l'entité :
+      - de la valeur d'apport ;
+      - du coût d'acquisition ;
+      - du coût de production, par le crédit, suivant le cas :
+      - d'un compte " Capital " (subdivision compte 10) ou du compte " Associés - opérations sur le capital " (subdivision compte 45 Groupe & associés) ;
+      - d'un compte 40 " Fournisseurs" ou autres comptes concernés ;
+      - d'un compte 72 - " Production immobilisée ". Les éléments suivants peuvent être distingués s'ils sont d'un montant significatif :
+      - terrains ;
+      - constructions ;
+      - installations techniques ;
+      - installations générales, agencements, aménagements ;
+      - matériels de transport ;
+      - matériels de bureau, matériels informatiques et mobilier de bureau ;
+      - emballages récupérables ;
+      - autres immobilisations corporelles. Les profits ou les pertes provenant de la mise hors service ou de la sortie d'une immobilisation corporelle sont déterminés par différence entre les produits de sortie nets estimés et la valeur comptable de l'actif et sont comptabilisés en produits ou en charges dans le compte de résultat dans les comptes 65 (subdivision pertes sur sorties d'actifs immobilisés) ou 75 (subdivision profits sur sorties d'actifs immobilisés).
+    children:
+    - id: 211
+      label: Terrains
+      parent: 21
+    - id: 212
+      label: Agencements et aménagements de terrain
+      parent: 21
+    - id: 213
+      label: Constructions
+      parent: 21
       children:
-        - id: 203
-          label: Frais de développement immobilisables
-          parent: 20
-        - id: 204
-          label: Logiciels informatiques et assimilés
-          parent: 20
-        - id: 205
-          label: 'Concenssions et droits similaires, brevets, licences, marques'
-          parent: 20
-        - id: 207
-          label: Fonds commercial
-          parent: 20
-        - id: 208
-          label: Autres immobilisations incorporelles
-          parent: 20
-    - id: 21
-      label: Immobilisations corporelles
-      parent: 2
+      - id: 2131
+        label: Bâtiments
+        parent: 213
+      - id: 2135
+        label: Installations générales agencements aménagements
+        parent: 213
+    - id: 215
+      label: Installations techniques
+      parent: 21
       children:
-        - id: 211
-          label: Terrains
-          parent: 21
-        - id: 212
-          label: Agencements et aménagements de terrain
-          parent: 21
-        - id: 213
-          label: Constructions
-          parent: 21
-          children:
-            - id: 2131
-              label: Bâtiments
-              parent: 213
-            - id: 2135
-              label: Installations générales agencements aménagements
-              parent: 213
-        - id: 215
-          label: Installations techniques
-          parent: 21
-          children:
-            - id: 2151
-              label: Installations complexes spécialisées
-              parent: 215
-            - id: 2154
-              label: Matériel industriel
-              parent: 215
-            - id: 2155
-              label: Outillage industriel
-              parent: 215
-            - id: 2157
-              label: Agencement et aménagement du matériel et outillage industriel
-              parent: 215
-        - id: 218
-          label: Autres immobilisations corporelles
-          parent: 21
-          children:
-            - id: 2181
-              label: 'Installations générales, agencements, aménagements'
-              parent: 218
-            - id: 2182
-              label: Matériel de transport
-              parent: 218
-            - id: 2183
-              label: Matériel de bureau et matériel informatique
-              parent: 218
-            - id: 2184
-              label: Mobilier
-              parent: 218
-            - id: 2185
-              label: Cheptel
-              parent: 218
-            - id: 2186
-              label: Matériel d'emballage
-              parent: 218
-    - id: 22
-      label: Immobilisations mise en concessions
-      parent: 2
+      - id: 2151
+        label: Installations complexes spécialisées
+        parent: 215
+      - id: 2154
+        label: Matériel industriel
+        parent: 215
+      - id: 2155
+        label: Outillage industriel
+        parent: 215
+      - id: 2157
+        label: Agencement et aménagement du matériel et outillage industriel
+        parent: 215
+    - id: 218
+      label: Autres immobilisations corporelles
+      parent: 21
       children:
-        - id: 221
-          label: Terrains en concession
-          parent: 22
-        - id: 222
-          label: Agencement et aménagemens de terrain en concession
-          parent: 22
-        - id: 223
-          label: Contruction en concession
-          parent: 22
-        - id: 225
-          label: Installation techniques en concession
-          parent: 22
-        - id: 228
-          label: Autres immobilisations corporelles en concession
-          parent: 22
-        - id: 229
-          label: Droits du concédant
-          parent: 22
-    - id: 23
-      label: Immobilisations en cours
-      parent: 2
+      - id: 2181
+        label: Installations générales, agencements, aménagements
+        parent: 218
+      - id: 2182
+        label: Matériel de transport
+        parent: 218
+      - id: 2183
+        label: Matériel de bureau et matériel informatique
+        parent: 218
+      - id: 2184
+        label: Mobilier
+        parent: 218
+      - id: 2185
+        label: Cheptel
+        parent: 218
+      - id: 2186
+        label: Matériel d'emballage
+        parent: 218
+  - id: 22
+    label: Immobilisations mise en concessions
+    parent: 2
+    description: |-
+      Les immobilisations incorporelles ou corporelles mises en concession par le concédant ou par le concessionnaire sont inscrites en compte 22, et sont éventuellement ventilées dans les mêmes conditions que celles inscrites aux comptes 20 et 21.
+      La contrepartie de la valeur des actifs mis gratuitement dans la concession par le concédant est enregistrée dans une subdivision du compte 22 " Droits du concédant " et figure au passif du bilan (passif non courant).
+    children:
+    - id: 221
+      label: Terrains en concession
+      parent: 22
+    - id: 222
+      label: Agencement et aménagemens de terrain en concession
+      parent: 22
+    - id: 223
+      label: Contruction en concession
+      parent: 22
+    - id: 225
+      label: Installation techniques en concession
+      parent: 22
+    - id: 228
+      label: Autres immobilisations corporelles en concession
+      parent: 22
+    - id: 229
+      label: Droits du concédant
+      parent: 22
+  - id: 23
+    label: Immobilisations en cours
+    parent: 2
+    description: |-
+      Ces comptes ont pour objet de faire apparaître la valeur des immobilisations non achevées à la fin de chaque exercice, ainsi que les avances et acomptes versés par l'entreprise à des tiers en vue de l'acquisition d'une immobilisation.
+      Ces comptes sont soldés lorsque l'immobilisation est achevée, avec pour contrepartie des comptes d'immobilisations (compte 21) Aucun amortissement ne peut être pratiqué sur des immobilisations en cours, mais une perte de valeur peut être constatée si compte tenu des changements d'estimation survenus au cours des travaux, la valeur recouvrable de l'immobilisation devient inférieure à sa valeur comptable.
+      Les immobilisations en cours se répartissent en deux groupes :
+      - les immobilisations qui résultent de travaux de plus ou moins longue durée confiés à des tiers ;
+      - les immobilisations créées par les moyens propres de l'entreprise.
+      a. Immobilisations acquises auprès des tiers Les immobilisations dont la réalisation est confiée à des tiers et qui ne sont pas achevées à la fin de l'exercice sont inscrites en immobilisations en cours en contrepartie des comptes de tiers concernés (comptes classe 4), sur la base des factures ou des décomptes de travaux fournis par ces tiers.
+      b. Immobilisations créées par les moyens propres de l'entité Les immobilisations créées par les moyens propres de l'entité et non achevées à la fin de l'exercice sont inscrites en immobilisations en cours en contrepartie d'un compte 72 " production immobilisée " pour le coût de production des éléments en cours (après enregistrement des charges dans les comptes de charge correspondant, comptes classe 6).
+      Avances et acomptes versés sur commandes d'immobilisations
+      Les avances et acomptes versés à des tiers dans le cadre de l'acquisition d'immobilisations sont également portés dans une subdivision du compte 23 " Avances et acomptes versés sur commandes d'immobilisations". Les entités ont également la faculté de comptabiliser en cours d'exercice ces avances et acomptes dans une subdivision du compte 40 intitulé " Fournisseurs - avances et acomptes versés sur commandes", à condition en fin d'exercice de virer ces avances et acomptes en compte 23 afin qu'ils apparaissent au bilan sous la rubrique immobilisations.
+    children:
+    - id: 232
+      label: Immobilisations corporelles en cours
+      parent: 23
+    - id: 237
+      label: Immobilisations incorporelles en cours
+      parent: 23
+    - id: 238
+      label: Avances et acomptes versés sur commandes d'immobilisations
+      parent: 23
+  - id: 24
+    label: null
+    parent: 2
+  - id: 25
+    label: null
+    parent: 2
+  - id: 26
+    label: Participations et créances rattachés à des participations
+    parent: 2
+    description: Ce compte 26 reçoit à son débit le coût d'acquisition (ou la valeur d'apport) des titres de participation ainsi que les créances rattachées à ces titres. Pour des titres dont la valeur nominale est partiellement libérée, la valeur totale est portée au débit du compte 26 " Titres de participation", en contrepartie du compte de tiers (ou du compte financier) pour la partie appelée et d'une subdivision du même compte - " Versements restant à effectuer sur titres de participation non libérés " pour la partie non appelée (cette dernière étant ensuite soldée au fur et à mesure des montants appelés versés, en contrepartie des comptes d'instruments de trésorerie et assimilés). En cas de cession des titres de participation, les plus ou moins values dégagées sont enregistrées en produits ou en charges (subdivision des comptes 75 et 65).
+    children:
+    - id: 261
+      label: Titres de participation
+      parent: 26
       children:
-        - id: 232
-          label: Immobilisations corporelles en cours
-          parent: 23
-        - id: 237
-          label: Immobilisations incorporelles en cours
-          parent: 23
-        - id: 238
-          label: Avances et acomptes versés sur commandes d'immobilisations
-          parent: 23
-    - id: 24
-      label: null
-      parent: 2
-    - id: 25
-      label: null
-      parent: 2
-    - id: 26
-      label: Participations et créances rattachés à des participations
-      parent: 2
+      - id: 2611
+        label: Actions
+        parent: 261
+      - id: 2612
+        label: Autres titres
+        parent: 261
+      - id: 2618
+        label: Intérêts courus
+        parent: 261
+    - id: 262
+      label: Autres formes de participations
+      parent: 26
+    - id: 265
+      label: Titres de participation évalués par équivalence
+      parent: 26
+    - id: 266
+      label: Créances rattachées à des participations groupe
+      parent: 26
+    - id: 267
+      label: Créances rattachées à des participations hors groupe
+      parent: 26
       children:
-        - id: 261
-          label: Titres de participation
-          parent: 26
-          children:
-            - id: 2611
-              label: Actions
-              parent: 261
-            - id: 2612
-              label: Autres titres
-              parent: 261
-            - id: 2618
-              label: Intérêts courus
-              parent: 261
-        - id: 262
-          label: Autres formes de participations
-          parent: 26
-        - id: 265
-          label: Titres de participation évalués par équivalence
-          parent: 26
-        - id: 266
-          label: Créances rattachées à des participations groupe
-          parent: 26
-        - id: 267
-          label: Créances rattachées à des participations hors groupe
-          parent: 26
-          children:
-            - id: 2671
-              label: Créances rattachées à des participations (groupe)
-              parent: 267
-            - id: 2674
-              label: Créances rattachées à des participations (hors groupe)
-              parent: 267
-        - id: 268
-          label: Créances rattachées à des sociétés en participation
-          parent: 26
-        - id: 269
-          label: >-
-            Versement restant à effectuer sur titres de participation non
-            libérés
-          parent: 26
-    - id: 27
-      label: Autres immobilisations financières
-      parent: 2
+      - id: 2671
+        label: Créances rattachées à des participations (groupe)
+        parent: 267
+      - id: 2674
+        label: Créances rattachées à des participations (hors groupe)
+        parent: 267
+    - id: 268
+      label: Créances rattachées à des sociétés en participation
+      parent: 26
+    - id: 269
+      label: Versement restant à effectuer sur titres de participation non libérés
+      parent: 26
+  - id: 27
+    label: Autres immobilisations financières
+    parent: 2
+    description: |-
+      Les comptes 27 enregistrent au débit :
+      - les titres immobilisés de l'activité de portefeuille ;
+      - les autres titres immobilisés ;
+      - les sommes versées par l'entité à titre de prêts financiers ou de cautionnement. Les comptes concernant les titres non courants de l'activité de portefeuille et les autres titres immobilisés fonctionnent selon les mêmes modalités que celles décrites pour les titres de participation. A la clôture de l'exercice, les intérêts courus non échus sont inscrits dans des subdivisions appropriées aux comptes par nature concernés.
+      Les remboursements en capital de l'ensemble de ces créances sont enregistrés au crédit de chacun des comptes visés, en contrepartie des comptes d'instruments de trésorerie et assimilés utilisés.
+    children:
+    - id: 271
+      label: Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille
+      parent: 27
       children:
-        - id: 271
-          label: >-
-            Titres immobilisés autres que les titres immobilisés de l'activité
-            de portefeuille
-          parent: 27
-          children:
-            - id: 2711
-              label: Actions
-              parent: 271
-            - id: 2712
-              label: Autres titres
-              parent: 271
-        - id: 272
-          label: 'Titres représentatifs de droit de créance (obligations, bons)'
-          parent: 27
-        - id: 273
-          label: Titres immobilisées de l'activité de protefeuille
-          parent: 27
-        - id: 274
-          label: Prêts
-          parent: 27
-          children:
-            - id: 2741
-              label: Prêts participatifs
-              parent: 274
-            - id: 2742
-              label: Prêts aux associés
-              parent: 274
-            - id: 2743
-              label: Prêts au personnel
-              parent: 274
-            - id: 2748
-              label: Autres prêts
-              parent: 274
-        - id: 275
-          label: Dépôts et cautionnements versés
-          parent: 27
-          children:
-            - id: 2751
-              label: Dépôts
-              parent: 275
-        - id: 276
-          label: Autres créances immobilisées
-          parent: 27
-        - id: 277
-          label: Actions propres (ou parts propres)
-          parent: 27
-        - id: 279
-          label: Versement restant à effectuer sur titres immobilisés non libérés
-          parent: 27
-    - id: 28
-      label: Amortissements des immobilisations
-      parent: 2
+      - id: 2711
+        label: Actions
+        parent: 271
+      - id: 2712
+        label: Autres titres
+        parent: 271
+    - id: 272
+      label: Titres représentatifs de droit de créance (obligations, bons)
+      parent: 27
+    - id: 273
+      label: Titres immobilisées de l'activité de protefeuille
+      parent: 27
+    - id: 274
+      label: Prêts
+      parent: 27
       children:
-        - id: 280
-          label: Amortissements des immobilisations incorporelles
-          parent: 28
-          children:
-            - id: 2803
-              label: Frais de développement immobilisables
-              parent: 280
-            - id: 2804
-              label: Logiciels informatiques et assimilés
-              parent: 280
-            - id: 2805
-              label: 'Concessions et droits similaires, brevets, licenses, marques'
-              parent: 280
-            - id: 2807
-              label: Fonds commercial
-              parent: 280
-            - id: 2808
-              label: Autres immobilisations incorporelles
-              parent: 280
-        - id: 281
-          label: Amortissements des immobilisations corporelles
-          parent: 28
-          children:
-            - id: 2811
-              label: Terrains
-              parent: 281
-            - id: 2812
-              label: Agencements et aménagements de terrain
-              parent: 281
-            - id: 2813
-              label: Constructions
-              parent: 281
-              children:
-                - id: 28131
-                  label: Bâtiments
-                  parent: 2813
-                - id: 28135
-                  label: 'Installations générales, agencements, aménagements'
-                  parent: 2813
-            - id: 2815
-              label: Installations techniques
-              parent: 281
-              children:
-                - id: 28151
-                  label: Installations Complexes Specialisées
-                  parent: 2815
-                - id: 28154
-                  label: Matériel industriel
-                  parent: 2815
-                - id: 28155
-                  label: Outillage industriel
-                  parent: 2815
-                - id: 28157
-                  label: >-
-                    Agencements et aménagements du matériel et outillage
-                    industriel
-                  parent: 2815
-            - id: 2818
-              label: Autres immobilisations corporelles
-              parent: 281
-              children:
-                - id: 28181
-                  label: 'Installations générales, agencements, aménagements'
-                  parent: 2818
-                - id: 28182
-                  label: Matériel de transport
-                  parent: 2818
-                - id: 28183
-                  label: Matériel de bureau et matériel informatique
-                  parent: 2818
-                - id: 28184
-                  label: Mobilier
-                  parent: 2818
-                - id: 28185
-                  label: Cheptel
-                  parent: 2818
-                - id: 28186
-                  label: Emballages récupérables
-                  parent: 2818
-        - id: 282
-          label: Amortissements des immobilisations mises en concession
-          parent: 28
-    - id: 29
-      label: Pertes de valeur sur immobilisations
-      parent: 2
+      - id: 2741
+        label: Prêts participatifs
+        parent: 274
+      - id: 2742
+        label: Prêts aux associés
+        parent: 274
+      - id: 2743
+        label: Prêts au personnel
+        parent: 274
+      - id: 2748
+        label: Autres prêts
+        parent: 274
+    - id: 275
+      label: Dépôts et cautionnements versés
+      parent: 27
       children:
-        - id: 290
-          label: Pertes de valeur sur immobilisations incorporelles
-          parent: 29
-        - id: 291
-          label: Pertes de valeur sur immobilisations corporelles
-          parent: 29
-        - id: 292
-          label: Dépréciations sur immobilisations mises en concession
-          parent: 29
-        - id: 293
-          label: Pertes de valeur sur immobilisations en cours
-          parent: 29
-        - id: 296
-          label: >-
-            Pertes de valeur sur participations et créances rattachées à
-            participations
-          parent: 29
-        - id: 297
-          label: Pertes de valeur sur autres immobilisations financières
-          parent: 29
+      - id: 2751
+        label: Dépôts
+        parent: 275
+    - id: 276
+      label: Autres créances immobilisées
+      parent: 27
+    - id: 277
+      label: Actions propres (ou parts propres)
+      parent: 27
+    - id: 279
+      label: Versement restant à effectuer sur titres immobilisés non libérés
+      parent: 27
+  - id: 28
+    label: Amortissements des immobilisations
+    parent: 2
+    description: |-
+      Les amortissements des immobilisations sont portés au crédit des comptes 28 " Amortissements des immobilisations". Ces comptes sont subdivisés selon le même niveau de détail que les comptes principaux (20 et 21) sur lesquels ils portent.
+      En contrepartie, les dotations aux amortissements sont enregistrées en charge au débit des comptes de dotations.
+      En cas de cession, d'expropriation ou de disparition indemnisée des éléments d'actifs, comme en cas de disparition des éléments d'actif sans indemnisation (par exemple : mise au rebut), les comptes d'amortissements sont virés au compte 20 ou 21 concerné.
+      Les immobilisations incorporelles doivent être amorties sur la base de leur durée d'utilité. Cette durée d'utilité est présumée ne pas dépasser 20 ans, sauf cas exceptionnel qui devra être justifié dans l'annexe.
+    children:
+    - id: 280
+      label: Amortissements des immobilisations incorporelles
+      parent: 28
+      children:
+      - id: 2803
+        label: Frais de développement immobilisables
+        parent: 280
+      - id: 2804
+        label: Logiciels informatiques et assimilés
+        parent: 280
+      - id: 2805
+        label: Concessions et droits similaires, brevets, licenses, marques
+        parent: 280
+      - id: 2807
+        label: Fonds commercial
+        parent: 280
+      - id: 2808
+        label: Autres immobilisations incorporelles
+        parent: 280
+    - id: 281
+      label: Amortissements des immobilisations corporelles
+      parent: 28
+      children:
+      - id: 2811
+        label: Terrains
+        parent: 281
+      - id: 2812
+        label: Agencements et aménagements de terrain
+        parent: 281
+      - id: 2813
+        label: Constructions
+        parent: 281
+        children:
+        - id: 28131
+          label: Bâtiments
+          parent: 2813
+        - id: 28135
+          label: Installations générales, agencements, aménagements
+          parent: 2813
+      - id: 2815
+        label: Installations techniques
+        parent: 281
+        children:
+        - id: 28151
+          label: Installations Complexes Specialisées
+          parent: 2815
+        - id: 28154
+          label: Matériel industriel
+          parent: 2815
+        - id: 28155
+          label: Outillage industriel
+          parent: 2815
+        - id: 28157
+          label: Agencements et aménagements du matériel et outillage industriel
+          parent: 2815
+      - id: 2818
+        label: Autres immobilisations corporelles
+        parent: 281
+        children:
+        - id: 28181
+          label: Installations générales, agencements, aménagements
+          parent: 2818
+        - id: 28182
+          label: Matériel de transport
+          parent: 2818
+        - id: 28183
+          label: Matériel de bureau et matériel informatique
+          parent: 2818
+        - id: 28184
+          label: Mobilier
+          parent: 2818
+        - id: 28185
+          label: Cheptel
+          parent: 2818
+        - id: 28186
+          label: Emballages récupérables
+          parent: 2818
+    - id: 282
+      label: Amortissements des immobilisations mises en concession
+      parent: 28
+  - id: 29
+    label: Pertes de valeur sur immobilisations
+    parent: 2
+    description: |-
+      Lors de la constatation d'une perte de valeur, le compte de provision concerné est crédité aux comptes 29 " Pertes de valeur sur immobilisations " (ces comptes étant subdivisés selon le même niveau de détail que les comptes principaux sur lesquels les provisions portent), en contrepartie du débit des comptes de dotations (d'exploitation, financières) concernés.
+      Les comptes “ Pertes de valeur ” sont réajustés à la fin de chaque exercice par :
+      - le débit des comptes de dotations correspondants, lorsque le montant de la perte de valeur doit être augmenté ;
+      - le crédit d'un compte 78 (de même niveau que celui utilisé pour la dotation), lorsque le montant de la perte de valeur doit être diminué ou annulé (perte de valeur devenue, en tout ou partie, sans objet).
+    children:
+    - id: 290
+      label: Pertes de valeur sur immobilisations incorporelles
+      parent: 29
+    - id: 291
+      label: Pertes de valeur sur immobilisations corporelles
+      parent: 29
+    - id: 292
+      label: Dépréciations sur immobilisations mises en concession
+      parent: 29
+    - id: 293
+      label: Pertes de valeur sur immobilisations en cours
+      parent: 29
+    - id: 296
+      label: Pertes de valeur sur participations et créances rattachées à participations
+      parent: 29
+    - id: 297
+      label: Pertes de valeur sur autres immobilisations financières
+      parent: 29
 - id: 3
   label: Comptes de stocks et d'en-cours
   parent: null
+  description: |-
+    Deux critères de classement sont généralement retenus dans le cadre de la nomenclature des comptes de stocks :
+    • l'ordre chronologique du cycle de production (approvisionnements, en cours de production, production stockée, marchandises revendues en l'état) ;
+    • la nature de l'actif stocké, qui doit faire l'objet d'une ventilation au sein de chaque entité selon ses besoins internes de gestion.
+    Au niveau comptable, on retient la distinction entre :
+    • les approvisionnements et marchandises achetés (matières premières, matières consommables, fournitures consommables, emballages) ;
+    • d'autre part, les produits fabriqués par l'entreprise ou en cours d'élaboration (produits finis, produits intermédiaires, produits résiduels, en cours).
+    Le choix de la méthode de suivi en comptabilité des stocks (méthode de l'inventaire permanent ou méthode de l'inventaire intermittent), relève d'une décision de gestion.
+    a. Comptabilisation dans le cadre de l'inventaire intermittent
+    • Enregistrement des approvisionnements et marchandises consommés :
+    - Au cours de la période, les achats sont enregistrés au débit des comptes 60 Achats consommés, par le crédit d'un compte de fournisseurs ou d'un compte de trésorerie.
+    - Le compte 60 peut être subdivisé selon le même schéma que les comptes de stocks (607 Marchandises , 601 Matières premières et fournitures, 602 Autres approvisionnements).
+    - A la clôture de la période, après avoir procédé à un inventaire extra comptable, il convient :
+    . de procéder à l'annulation du stock de début de période (crédit des comptes 37 "Marchandises ", 31 " Matières premières et fournitures " et 32 " Autres approvisionnements "
+    par le débit d'une subdivision du compte 60 (sous comptes 603 " Variations des stocks "),
+    . de constater le stock de fin de période par le débit des comptes stocks et le crédit des sous comptes 603 " Variation des stocks " correspondant.
+    • Enregistrement des produits fabriqués ou en cours de fabrication
+    - En cours de période, aucune écriture spécifique n'est enregistrée en classe 3 (les éléments nécessaires à la production sont enregistrés dans les comptes de charges par nature).
+    - En fin de période, après avoir procédé à un inventaire extra-comptable, il convient, comme pour l'enregistrement des approvisionnements et marchandises consommés :
+    . de procéder à l'annulation du stock de début de période : crédit des comptes 33 " En cours de production de biens ", 34 " En cours de production de services " et 35 " Stocks de produits " par le débit des comptes 71 " Production stockée ou déstockage " correspondant ;
+    . de constater le stock de fin de période par le débit des comptes stocks et le crédit des comptes 71 correspondant.
+    b. Cas de l'inventaire permanent
+    La méthode de l'inventaire permanent permet un suivi comptable des stocks et favorise l'arrêté rapide des situations comptables périodiques. Il permet également au niveau des produits finis d'établir une correspondance directe entre les coûts des stocks vendus et les revenus y afférents.
+    • Enregistrement des approvisionnements et marchandises consommés :
+    - Au cours de la période :
+    . les achats sont enregistrés comme dans le cadre de l'inventaire intermittent au débit des comptes 60 Achats consommés, par le crédit d'un compte de fournisseurs ou d'un compte de trésorerie ;
+    . les comptes de stocks fonctionnent comme des comptes de magasins : ils sont débités des entrées en magasin par le crédit des sous comptes 603 " Variations des stocks ", et ils sont crédités des sorties par le débit de ces mêmes comptes 603.
+    - En fin de période, après analyse, les écarts éventuels entre le stock physique, évalué de façon extra comptable et le stock figurant au débit des comptes 37, 31 ou 32 en comptabilité sont enregistrés afin de porter le montant de ces derniers à la valeur constatée dans l'inventaire physique.
+    • Enregistrement des produits fabriqués ou en cours de fabrication
+    - Au cours de la période, les comptes de stocks (35 " Stocks de produits " et éventuellement 34 " En cours de production de services " et 33 " En cours de production de biens ") fonctionnent comme des comptes de magasin : ils sont débités des entrées en magasin par le crédit des comptes 71 " Production stockée ou déstockage ", et sont crédités des sorties par le débit de ces mêmes comptes 71.
+    - En fin de période, après analyse, les écarts éventuels entre le stock physique, évalué de façon extra comptable, et le stock figurant au débit des comptes 33, 34 ou 37 en comptabilité, sont enregistrés afin de porter le montant de ces derniers à la valeur constatée dans l'inventaire physique. Ces boni et mali d'inventaire sont généralement enregistrés également en compte 71 “ Production stockée ou déstockage ”.
   children:
-    - id: 31
-      label: Matières premières et fournitures
-      parent: 3
-    - id: 32
-      label: Autres approvisionnements
-      parent: 3
+  - id: 31
+    label: Matières premières et fournitures
+    parent: 3
+  - id: 32
+    label: Autres approvisionnements
+    parent: 3
+    children:
+    - id: 321
+      label: Matières consommables
+      parent: 32
+    - id: 322
+      label: Fournitures consommables
+      parent: 32
       children:
-        - id: 321
-          label: Matières consommables
-          parent: 32
-        - id: 322
-          label: Fournitures consommables
-          parent: 32
-          children:
-            - id: 3221
-              label: Combustibles
-              parent: 322
-            - id: 3222
-              label: Produits d'entretiens
-              parent: 322
-            - id: 3223
-              label: Fournitures d'atelier et d'usine
-              parent: 322
-            - id: 3224
-              label: Fournitures de magasin
-              parent: 322
-            - id: 3225
-              label: Fournitures de bureau
-              parent: 322
-        - id: 326
-          label: Emballages
-          parent: 32
-          children:
-            - id: 3261
-              label: Emballages perdus
-              parent: 326
-            - id: 3265
-              label: Emballages récupérables
-              parent: 326
-    - id: 33
-      label: En cours de productions de biens
-      parent: 3
+      - id: 3221
+        label: Combustibles
+        parent: 322
+      - id: 3222
+        label: Produits d'entretiens
+        parent: 322
+      - id: 3223
+        label: Fournitures d'atelier et d'usine
+        parent: 322
+      - id: 3224
+        label: Fournitures de magasin
+        parent: 322
+      - id: 3225
+        label: Fournitures de bureau
+        parent: 322
+    - id: 326
+      label: Emballages
+      parent: 32
       children:
-        - id: 331
-          label: Produits en cours
-          parent: 33
-        - id: 335
-          label: Travaux en cours
-          parent: 33
-    - id: 34
-      label: En cours de productions de services
-      parent: 3
+      - id: 3261
+        label: Emballages perdus
+        parent: 326
+      - id: 3265
+        label: Emballages récupérables
+        parent: 326
+  - id: 33
+    label: En cours de productions de biens
+    parent: 3
+    children:
+    - id: 331
+      label: Produits en cours
+      parent: 33
+    - id: 335
+      label: Travaux en cours
+      parent: 33
+  - id: 34
+    label: En cours de productions de services
+    parent: 3
+    children:
+    - id: 341
+      label: Etudes en cours
+      parent: 34
+    - id: 345
+      label: Prestations de services en cours
+      parent: 34
+  - id: 35
+    label: Stocks de produits
+    parent: 3
+    children:
+    - id: 351
+      label: Produits intermédiaires
+      parent: 35
+    - id: 355
+      label: Produits finis
+      parent: 35
+    - id: 358
+      label: Produits résiduels ou matières de récupération (déchets, rebuts)
+      parent: 35
       children:
-        - id: 341
-          label: Etudes en cours
-          parent: 34
-        - id: 345
-          label: Prestations de services en cours
-          parent: 34
-    - id: 35
-      label: Stocks de produits
-      parent: 3
+      - id: 3581
+        label: Déchets
+        parent: 358
+      - id: 3585
+        label: Rebuts
+        parent: 358
+      - id: 3586
+        label: Matières de récupération
+        parent: 358
+  - id: 36
+    label: null
+    parent: 3
+  - id: 37
+    label: Stocks de marchandises
+    parent: 3
+  - id: 38
+    label: Stocks à l'exterieur (en cours de route, en dépôt ou en consignation)
+    parent: 3
+    description: c. Les stocks mis en dépôt ou en consignation, ou qui sont en voie d'acheminement peuvent faire l'objet d'une comptabilisation dans un compte 38 “ Stocks à l'extérieur ” jusqu'à réception dans les magasins de l'entité ou jusqu'au dénouement de l'opération (en cas de dépôt-vente). En fin de période, si ce compte n'est pas soldé, un état détaillé des stocks correspondant doit être établi par l'entité.
+  - id: 39
+    label: Pertes de valeur sur stocks et en cours
+    parent: 3
+    description: |-
+      d. Lors de leur constitution, les pertes de valeur constatées sur les stocks sont créditées aux comptes 39 créés par nature d'éléments en stocks :
+      - pertes de valeur des stocks de matières premières et fournitures ;
+      - pertes de valeur des autres approvisionnements ;
+      - pertes de valeur des stocks d'en-cours de production ;
+      - pertes de valeur des stocks de produits ;
+      - pertes de valeur des stocks de marchandises.
+      En contrepartie, les comptes de dotations concernés sont débités.
+      Le compte de provision relatif à chaque nature d'éléments en stocks est réajusté à la fin de chaque exercice par :
+      - le débit des comptes de dotations correspondants, lorsque le montant de la perte de valeur doit être augmenté ;
+      - le crédit d'un compte 78 (de même niveau que celui utilisé pour la dotation), lorsque le montant de la perte de valeur doit être diminué ou annulé (perte de valeur devenue, en tout ou partie sans objet).
+    children:
+    - id: 391
+      label: Pertes de valeur matières premières et fournitures
+      parent: 39
+    - id: 392
+      label: Pertes de valeur autres approvisionnements
+      parent: 39
       children:
-        - id: 351
-          label: Produits intermédiaires
-          parent: 35
-        - id: 355
-          label: Produits finis
-          parent: 35
-        - id: 358
-          label: 'Produits résiduels ou matières de récupération (déchets, rebuts)'
-          parent: 35
-          children:
-            - id: 3581
-              label: Déchets
-              parent: 358
-            - id: 3585
-              label: Rebuts
-              parent: 358
-            - id: 3586
-              label: Matières de récupération
-              parent: 358
-    - id: 36
-      label: null
-      parent: 3
-    - id: 37
-      label: Stocks de marchandises
-      parent: 3
-    - id: 38
-      label: 'Stocks à l''exterieur (en cours de route, en dépôt ou en consignation)'
-      parent: 3
-    - id: 39
-      label: Pertes de valeur sur stocks et en cours
-      parent: 3
-      children:
-        - id: 391
-          label: Pertes de valeur matières premières et fournitures
-          parent: 39
-        - id: 392
-          label: Pertes de valeur autres approvisionnements
-          parent: 39
-          children:
-            - id: 3921
-              label: Matières cosommables
-              parent: 392
-            - id: 3922
-              label: Fournitures consommables
-              parent: 392
-              children:
-                - id: 39221
-                  label: Combustibles
-                  parent: 3922
-                - id: 39222
-                  label: Produits d'entretien
-                  parent: 3922
-                - id: 39223
-                  label: Fournitures d'atelier et d'usines
-                  parent: 3922
-                - id: 39224
-                  label: Fournitures de magasin
-                  parent: 3922
-                - id: 39225
-                  label: Fournitures de bureau
-                  parent: 3922
-        - id: 393
-          label: Pertes de valeur en cours de production de biens
-          parent: 39
-        - id: 394
-          label: Pertes de valeur en cours de production de services
-          parent: 39
-        - id: 395
-          label: Pertes de valeur de stocks de produits
-          parent: 39
-        - id: 397
-          label: Pertes de valeur de stocks de marchandises
-          parent: 39
-        - id: 398
-          label: Pertes de valeur stocks à l'exterieur
-          parent: 39
+      - id: 3921
+        label: Matières cosommables
+        parent: 392
+      - id: 3922
+        label: Fournitures consommables
+        parent: 392
+        children:
+        - id: 39221
+          label: Combustibles
+          parent: 3922
+        - id: 39222
+          label: Produits d'entretien
+          parent: 3922
+        - id: 39223
+          label: Fournitures d'atelier et d'usines
+          parent: 3922
+        - id: 39224
+          label: Fournitures de magasin
+          parent: 3922
+        - id: 39225
+          label: Fournitures de bureau
+          parent: 3922
+    - id: 393
+      label: Pertes de valeur en cours de production de biens
+      parent: 39
+    - id: 394
+      label: Pertes de valeur en cours de production de services
+      parent: 39
+    - id: 395
+      label: Pertes de valeur de stocks de produits
+      parent: 39
+    - id: 397
+      label: Pertes de valeur de stocks de marchandises
+      parent: 39
+    - id: 398
+      label: Pertes de valeur stocks à l'exterieur
+      parent: 39
 - id: 4
   label: Comptes de tiers
   parent: null
   children:
-    - id: 40
-      label: Fournisseurs et comptes rattachés
-      parent: 4
+  - id: 40
+    label: Fournisseurs et comptes rattachés
+    parent: 4
+    description: |-
+      Figurent sous le compte 40, les dettes et avances de fonds liées à l'acquisition de biens ou de services. Selon les besoins, des subdivisions du compte 40 peuvent être ouvertes telles que :
+      • fournisseurs de biens et services ;
+      • effets à payer ;
+      • fournisseurs, emballages et matériels à rendre ;
+      • fournisseurs, charges à payer ;
+      • rabais, remises, ristournes et autres avoirs à recevoir ;
+      • avances et acomptes versés sur commandes.
+      La subdivision du compte 40 " Fournisseurs de biens et services " :
+      • est créditée du montant des factures d'achats de biens ou de prestations de services par le débit :
+      - des comptes concernés de la classe 6 (montant hors taxes récupérables),
+      - d'une subdivision du compte 40 pour les créances au titre des emballages et matériels à rendre,
+      - d'une subdivision du compte 44 " TVA déductible " pour le montant des taxes récupérables ;
+      • est débitée par le crédit :
+      - d'un compte de trésorerie lors des règlements effectués par l'entité à ses fournisseurs,
+      - d'un compte de classe 6 pour le montant des factures d'avoir reçues à l'occasion de retour de marchandises au fournisseur ou des rabais, remises et ristournes obtenues (et du compte de TVA concerné),
+      - d'un compte " Effets à payer sur biens et services " (subdivision du compte 40) lors de l'acceptation d'une lettre de change ou de la remise d'un billet à ordre.
+      Les comptes " Effets à payer " sont soldés par un compte de trésorerie lors de leur paiement (ou sont ré imputés aux comptes " Fournisseurs
+      de biens et services " concernés en cas de non-paiement à l'échéance). Le compte " Fournisseurs - Charges à payer " est crédité à la clôture de l'exercice du montant, TVA comprise, des factures imputables à la période close mais non encore parvenues, dont le montant est suffisamment connu et évaluable, par le débit des comptes concernés de la classe 6. La subdivision du compte " Rabais, remises, ristournes à obtenir et autres avoirs non encore reçus " est débitée à la clôture de l'exercice du montant, TVA comprise, des avoirs imputables à la période close mais non encore parvenus, dont le montant est suffisamment certain et évaluable, par le crédit des comptes concernés des classes 4 et 6. La subdivision du compte 40 qui enregistre les avances et acomptes versés sur commandes est débitée, lors du paiement par l'entité d'avances sur commandes passées auprès des fournisseurs, par le crédit d'un compte de trésorerie. Il est crédité par le débit du compte fournisseurs. Les avances et acomptes versés sur commandes d'immobilisations sont imputés au débit du compte 23, et non à une subdivision du compte 40 " avances et acomptes versés ". La subdivision du compte 40 qui enregistre les créances pour emballages et matériels à rendre est débitée par le crédit du compte “Fournisseurs " lors de la consignation par les fournisseurs à l'entité d'emballages ou de matériels pour le montant de la consignation.
+    children:
+    - id: 401
+      label: Fournisseurs de biens et services
+      parent: 40
       children:
-        - id: 401
-          label: Fournisseurs de biens et services
-          parent: 40
-          children:
-            - id: 4011
-              label: Malagasy
-              parent: 401
-            - id: 4012
-              label: Etrangers
-              parent: 401
-        - id: 403
-          label: Fournisseurs effets à payer
-          parent: 40
-        - id: 404
-          label: Fournisseurs d'immobilisations
-          parent: 40
-        - id: 405
-          label: Fournisseurs d'immobilisations effets à payer
-          parent: 40
-        - id: 408
-          label: Fournisseurs factures non parvenues
-          parent: 40
-          children:
-            - id: 4088
-              label: Fournisseurs intérêt courus
-              parent: 408
-        - id: 409
-          label: >-
-            Fournisseurs débiteurs: avances et acomptes RRR à obtenir, autres
-            créances
-          parent: 40
-          children:
-            - id: 4091
-              label: Fournisseurs Avances et acomptes versés sur commandes
-              parent: 409
-            - id: 4096
-              label: Fournisseurs Créances pour emballage et matériel à rendre
-              parent: 409
-            - id: 4097
-              label: Fournisseurs Autres avoirs
-              parent: 409
-            - id: 4098
-              label: >-
-                Rabais, remises, ristournes à obtenir et autres avoirs non
-                encore reçus
-              parent: 409
-    - id: 41
-      label: Clients et comptes rattachés
-      parent: 4
+      - id: 4011
+        label: Malagasy
+        parent: 401
+      - id: 4012
+        label: Etrangers
+        parent: 401
+    - id: 403
+      label: Fournisseurs effets à payer
+      parent: 40
+    - id: 404
+      label: Fournisseurs d'immobilisations
+      parent: 40
+    - id: 405
+      label: Fournisseurs d'immobilisations effets à payer
+      parent: 40
+    - id: 408
+      label: Fournisseurs factures non parvenues
+      parent: 40
       children:
-        - id: 411
-          label: Clients
-          parent: 41
-          children:
-            - id: 4111
-              label: Malagasy
-              parent: 411
-            - id: 4112
-              label: Etrangers
-              parent: 411
-        - id: 413
-          label: Clients effets à recevoir
-          parent: 41
-        - id: 414
-          label: Effets à l'encaissement
-          parent: 41
-        - id: 415
-          label: Effets remis à l'escompte
-          parent: 41
-        - id: 416
-          label: Clients douteux
-          parent: 41
-        - id: 417
-          label: Créances sur travaux non encore facturables
-          parent: 41
-        - id: 418
-          label: Clients - produits non facturés
-          parent: 41
-          children:
-            - id: 4181
-              label: Clients factures à établir
-              parent: 418
-            - id: 4182
-              label: Clients intérêts courus
-              parent: 418
-        - id: 419
-          label: Clients créditeurs
-          parent: 41
-          children:
-            - id: 4191
-              label: Clients et avances sur commandes
-              parent: 419
-            - id: 4196
-              label: Clients dettes sur emballages et matériels consignés
-              parent: 419
-            - id: 4197
-              label: Clients autres avoirs
-              parent: 419
-            - id: 4198
-              label: >-
-                Rabais, remises, ristournes à accorder et autres avoirs à
-                établir
-              parent: 419
-    - id: 42
-      label: Personnels et comptes rattachés
-      parent: 4
+      - id: 4088
+        label: Fournisseurs intérêt courus
+        parent: 408
+    - id: 409
+      label: 'Fournisseurs débiteurs: avances et acomptes RRR à obtenir, autres créances'
+      parent: 40
       children:
-        - id: 421
-          label: 'Personnels, rémunérations dues'
-          parent: 42
-        - id: 422
-          label: Fonds sociaux - oeuvres sociales
-          parent: 42
-        - id: 425
-          label: 'Personnel, avances et acomptes accordés'
-          parent: 42
-        - id: 426
-          label: 'Personnel, dépôt reçus'
-          parent: 42
-        - id: 427
-          label: 'Personnel, oppositions'
-          parent: 42
-        - id: 428
-          label: 'Personnel, charges à payer et produit à recevoir'
-          parent: 42
-          children:
-            - id: 4286
-              label: Charges à payer
-              parent: 428
-            - id: 4287
-              label: Produits à recevoirs
-              parent: 428
-    - id: 43
-      label: Organismes sociaux et compte rattachés
-      parent: 4
+      - id: 4091
+        label: Fournisseurs Avances et acomptes versés sur commandes
+        parent: 409
+      - id: 4096
+        label: Fournisseurs Créances pour emballage et matériel à rendre
+        parent: 409
+      - id: 4097
+        label: Fournisseurs Autres avoirs
+        parent: 409
+      - id: 4098
+        label: Rabais, remises, ristournes à obtenir et autres avoirs non encore reçus
+        parent: 409
+  - id: 41
+    label: Clients et comptes rattachés
+    parent: 4
+    description: |-
+      Figurent sous le compte 41, les créances liées à la vente de biens ou services rattachés au cycle d'exploitation de l'entité. Selon les besoins de la gestion et de l'information financière, des subdivisions du compte 41 peuvent être ouvertes telles que :
+      • clients ;
+      • clients douteux ;
+      • effets à recevoir ;
+      • effets escomptés non échus ;
+      • clients, emballages et matériels prêtés ;
+      • clients, produits à recevoir ;
+      • rabais, remises, ristournes et autres avoirs à accorder ;
+      • avances et acomptes reçus sur commandes.
+      Le compte " Clients " :
+      • est débité du montant des factures de ventes de biens ou de prestations de services par le crédit :
+      - de l'une des subdivisions du compte 70 " Ventes de produits fabriqués et de marchandises " ou du compte 71 " Ventes de prestations de services et produits annexes " (montant hors TVA collecté),
+      - d'une subdivision du compte 41 pour les dettes au titre des emballages et matériels consignés, et
+      - d'une subdivision du compte 44 au titre de la TVA collectée ;
+      • est crédité par le débit :
+      - d'un compte de trésorerie lors des règlements reçus des clients,
+      - de l'une des subdivisions du compte 70 ou du compte 71 pour le montant des avoirs établis par l'entité lors du retour de marchandises par les clients, ou pour le montant des rabais, remises et ristournes accordés (et du compte de TVA concerné),
+      - du compte " Effets à recevoir " lors de l'acceptation par les clients d'une lettre de change ou de la réception d'un billet à ordre,
+      - d'une subdivision du compte 41 pour les avances et acomptes reçus sur commandes (pour solde de ces derniers).
+      Le compte " Effets à recevoir " est débité par le crédit du compte "Clients" au moment de l'entrée des effets en portefeuille. Ce compte est crédité :
+      • à l'échéance de l'effet, par le débit d'un compte de trésorerie ;
+      • en cas de remise à l'escompte, par le débit d'une subdivision du compte 41 " Effets escomptés non échus " et par le débit d'un compte de charges financières pour la partie relative aux intérêts d'escompte.
+      En cas de non-paiement à l'échéance, le montant des effets est ré imputé au débit du compte " Clients " en contrepartie du compte " Effets à recevoir ".
+      Le compte " Clients douteux " est débité par le crédit du compte ”Clients " pour le montant total des créances que l'entité possède à l'encontre notamment de clients dont la solvabilité apparaît douteuse ou litigieuse.
+      Les subdivisions du compte 41 “Créances sur travaux non encore facturables” enregistrent au débit la contrepartie des produits nets partiels hors taxes constatés au cours de la réalisation d'un contrat à long terme.
+      Les subdivisions du compte 41 - “Produits non encore facturés (ou factures à établir)” sont débitées, à la clôture de la période comptable, du montant taxes comprises des créances imputables à la période close et pour lesquelles les pièces justificatives (factures, décompte…) n'ont pas encore été établies.
+      Ces comptes sont crédités lors de l'établissement des factures par le débit des comptes de tiers concernés.
+      La subdivision du compte 41 " Rabais, remises, ristournes à accorder et autres avoirs à établir " enregistre au crédit (TVA comprise) à la clôture de l'exercice les avoirs à établir imputables à la période close, dont le montant est suffisamment connu et évaluable, par le débit des comptes concernés des classes 4 et 7.
+      La subdivision du compte "Clients, emballages et matériels prêtés " est créditée des créances correspondant aux montants facturés par l'entité à ses clients au titre des consignations d'emballages ou de matériel, en contrepartie du compte " Clients ".
+      Il est débité du même montant :
+      • par le crédit du compte " Clients ", en cas de restitution de l'emballage ;
+      • par le crédit des comptes intéressés de la classe 7, dans le cas où l'emballage serait conservé par le client (cessions d'immobilisations ou d'approvisionnement en fonction du mode de comptabilisation retenu pour les emballages) ;
+      • par le crédit du compte " client " et d'une subdivision du compte 71 - " Bonis sur reprises d'emballages consignés ", lorsque la reprise est effectuée pour un prix inférieur à celui de la consignation.
+    children:
+    - id: 411
+      label: Clients
+      parent: 41
       children:
-        - id: 431
-          label: Organismes sociaux A
-          parent: 43
-        - id: 432
-          label: Organismes sociaux B
-          parent: 43
-        - id: 438
-          label: Organismes sociaux charges à payer
-          parent: 43
-          children:
-            - id: 4382
-              label: Charges sociales sur congés à payer
-              parent: 438
-            - id: 4386
-              label: Charges sociales à payer
-              parent: 438
-            - id: 4387
-              label: Produits à recevoir
-              parent: 438
-    - id: 44
-      label: 'Etat, collectivités publiques, organismes internationaux'
-      parent: 4
+      - id: 4111
+        label: Malagasy
+        parent: 411
+      - id: 4112
+        label: Etrangers
+        parent: 411
+    - id: 413
+      label: Clients effets à recevoir
+      parent: 41
+    - id: 414
+      label: Effets à l'encaissement
+      parent: 41
+    - id: 415
+      label: Effets remis à l'escompte
+      parent: 41
+    - id: 416
+      label: Clients douteux
+      parent: 41
+    - id: 417
+      label: Créances sur travaux non encore facturables
+      parent: 41
+    - id: 418
+      label: Clients - produits non facturés
+      parent: 41
       children:
-        - id: 441
-          label: 'Etat, subventions à recevoir'
-          parent: 44
-          children:
-            - id: 4411
-              label: Subventions d'investissement
-              parent: 441
-            - id: 4417
-              label: Subventions d'exploitation
-              parent: 441
-        - id: 442
-          label: 'Etat, impôts et taxess recouvrables sur des tiers'
-          parent: 44
-        - id: 443
-          label: Opérations particulières avec l'Etat et autres organismes publics
-          parent: 44
-        - id: 444
-          label: 'Etat, impôts sur les résultats'
-          parent: 44
-        - id: 445
-          label: 'Etat, taxes sur les chiffres d''affaires'
-          parent: 44
-          children:
-            - id: 4454
-              label: Crédit de taxes
-              parent: 445
-            - id: 4455
-              label: Taxes sur le chiffre d'affaires à décaisser
-              parent: 445
-            - id: 4456
-              label: Taxes sur le chiffre d'affaires déductibles
-              parent: 445
-            - id: 4457
-              label: Taxes sur le chiffre d'affaire collectées ou en attente
-              parent: 445
-        - id: 447
-          label: 'Autres impôts, taxes et versements assimilés'
-          parent: 44
-        - id: 448
-          label: 'Etat, charges à payer et produits à recevoir'
-          parent: 44
-          children:
-            - id: 4486
-              label: Charges à payer
-              parent: 448
-            - id: 4487
-              label: Produits à recevoir
-              parent: 448
-    - id: 45
-      label: Groupes et assoicués
-      parent: 4
+      - id: 4181
+        label: Clients factures à établir
+        parent: 418
+      - id: 4182
+        label: Clients intérêts courus
+        parent: 418
+    - id: 419
+      label: Clients créditeurs
+      parent: 41
       children:
-        - id: 451
-          label: Opération groupe
-          parent: 45
-        - id: 455
-          label: 'Associés, comptes courants'
-          parent: 45
-          children:
-            - id: 4551
-              label: Principal
-              parent: 455
-            - id: 4558
-              label: Intérêts courus
-              parent: 455
-        - id: 456
-          label: 'Assoiés, opérations sur capital'
-          parent: 45
-          children:
-            - id: 4561
-              label: Associés compte d'apport en société
-              parent: 456
-              children:
-                - id: 45611
-                  label: Apport en nature
-                  parent: 4561
-                - id: 45615
-                  label: Apport en numéraire
-                  parent: 4561
-            - id: 4562
-              label: 'Apport Capital appelé, non versé'
-              parent: 456
-              children:
-                - id: 45621
-                  label: 'Actionnaires Capital souscrit et appelé, non versé'
-                  parent: 4562
-                - id: 45625
-                  label: 'Actionnaires Capital appelé, non versé'
-                  parent: 4562
-            - id: 4563
-              label: Associés versement reçus sur augmentation de capital
-              parent: 456
-            - id: 4564
-              label: Associés Versements anticipés
-              parent: 456
-            - id: 4566
-              label: Actionnaires défaillants
-              parent: 456
-            - id: 4567
-              label: Associés Capital à rembourser
-              parent: 456
-        - id: 457
-          label: 'Associés, dividendes à payer'
-          parent: 45
-        - id: 458
-          label: 'Assoicés, opérations faites en commun ou en groupement'
-          parent: 45
-          children:
-            - id: 4587
-              label: Opérations courantes
-              parent: 458
-            - id: 4588
-              label: Intérêts courus
-              parent: 458
-    - id: 46
-      label: Débiteurs divers et créditeurs divers
-      parent: 4
+      - id: 4191
+        label: Clients et avances sur commandes
+        parent: 419
+      - id: 4196
+        label: Clients dettes sur emballages et matériels consignés
+        parent: 419
+      - id: 4197
+        label: Clients autres avoirs
+        parent: 419
+      - id: 4198
+        label: Rabais, remises, ristournes à accorder et autres avoirs à établir
+        parent: 419
+  - id: 42
+    label: Personnels et comptes rattachés
+    parent: 4
+    description: |-
+      Selon les besoins de la gestion et de l'information financière, des subdivisions du compte 42 peuvent être ouvertes telles que :
+      • Personnel - rémunérations dues ;
+      • Personnel - avances et acomptes ;
+      • Personnel - oppositions sur salaires ;
+      • Personnel - fonds des œuvres sociales ;
+      • Personnel, charges à payer (Débit) ou charges comptabilisées d'avance (Crédit).
+      Rémunérations du personnel Le compte " Personnel - rémunérations dues " est crédité des rémunérations brutes à payer au personnel par le débit des comptes de charges intéressés (641 Rémunérations du personnel). Il est débité :
+      • du montant des avances et acomptes versés au personnel par le crédit du compte 42 - " Personnel - avances et acomptes " (cas de l'imputation de tout ou partie des avances et acomptes versés) ;
+      • du montant des oppositions notifiées à l'entité à l'encontre des membres de son personnel par le crédit du compte 42 - " Personnel - oppositions " ;
+      • de la quote-part des charges sociales incombant au personnel par le crédit du compte 43 - " Organismes sociaux et comptes rattachés " ;
+      • du montant des règlements effectués au personnel par le crédit d'un compte de trésorerie.
+      Autres méthodes de comptabilisation des rémunérations du personnel : Les comptes 42 " Personnel - rémunérations dues ", peuvent également n'enregistrer que le montant net à payer (et non le brut) au vu des bulletins de paye. Dans le cadre de cette méthode, les comptes de charges 64 (sous compte 641 rémunérations du personnel) sont alors crédité des comptes ouverts à chacun des tiers bénéficiaires : 421 Rémunérations du personnel (montant net à payer) ; 425 Avances et acomptes au personnel ; 427 Personnel - oppositions ; 43 Organismes sociaux et comptes rattachés (part salariale et part patronale figurant dans la rémunération brute).
+      Le compte "Personnel - oppositions" est crédité du montant des sommes faisant l'objet d'oppositions obtenues par des tiers à
+      l'encontre de membres du personnel de l'entité, par le débit du compte " Personnel, rémunérations dues ". Il est débité du montant desdites sommes, lors de leur versement aux tiers bénéficiaires de l'opposition, par le crédit d'un compte de trésorerie.
+      Le compte " Œuvres sociales " est crédité du montant des sommes mises à la disposition des œuvres au personnel (cantines, comités d'entreprises, …) par le débit du compte des charges sociales. Il est débité du montant des versements effectués à ces œuvres sociales par le crédit d'un compte de trésorerie.
+      Le compte " Personnel - charges à payer " est mouvementé à la clôture de l'exercice pour permettre l'enregistrement des charges et des produits rattachables à l'exercice clos (exemples : dettes de l'entité envers son personnel au titre des congés à payer, des primes d'intéressement ou des gratifications à accorder, enregistrées au crédit du compte en contrepartie du compte de charges de personnel).
+      Lors du paiement effectif, le compte " Personnel - charges à payer " est soldé en contrepartie du compte " Personnel, rémunérations dues”, les ajustements nécessaires étant enregistrés aux comptes intéressés. Ce compte peut aussi être contre-passé à l'ouverture de l'exercice qui suit.
+    children:
+    - id: 421
+      label: Personnels, rémunérations dues
+      parent: 42
+    - id: 422
+      label: Fonds sociaux - oeuvres sociales
+      parent: 42
+    - id: 425
+      label: Personnel, avances et acomptes accordés
+      parent: 42
+    - id: 426
+      label: Personnel, dépôt reçus
+      parent: 42
+    - id: 427
+      label: Personnel, oppositions
+      parent: 42
+    - id: 428
+      label: Personnel, charges à payer et produit à recevoir
+      parent: 42
       children:
-        - id: 462
-          label: Créances sur cessions d'immobilisations
-          parent: 46
-        - id: 464
-          label: Dettes sur acquisitions de valeurs mobilières de placement
-          parent: 46
-        - id: 465
-          label: Créances sur cessions de valeurs mobilières de placement
-          parent: 46
-        - id: 467
-          label: Autres comptes débiteurs ou créditeurs
-          parent: 46
-        - id: 468
-          label: Divers charges à payer ou produits à recevoir
-          parent: 46
-          children:
-            - id: 4686
-              label: Charges à payer
-              parent: 468
-            - id: 4687
-              label: Produits à recevoir
-              parent: 468
-    - id: 47
-      label: Comptes transitoires ou d'attente
-      parent: 4
-    - id: 48
-      label: Charges ou produits constatés d'avance et provisions
-      parent: 4
+      - id: 4286
+        label: Charges à payer
+        parent: 428
+      - id: 4287
+        label: Produits à recevoirs
+        parent: 428
+  - id: 43
+    label: Organismes sociaux et compte rattachés
+    parent: 4
+    description: |-
+      Les comptes 43 "Organismes sociaux et comptes rattachés " sont crédités respectivement du montant :
+      • des sommes dues par l'entité à la Sécurité Sociale ainsi qu'aux différents organismes sociaux au titre des cotisations patronales d'assurances sociales, d'allocations familiales, d'accidents du travail, de retraites du personnel, … par le débit des comptes de charges par nature intéressés ;
+      • des sommes à régler aux organismes susvisés pour le compte du personnel par le débit du compte " Personnel - rémunérations dues ".
+      Ils sont débités des règlements effectués à ces organismes par le crédit d'un compte de trésorerie.
+      Une subdivision du compte 43 " Organismes sociaux - charges à payer" est mouvementée à la clôture de l'exercice pour permettre l'enregistrement des charges et des produits rattachables à l'exercice
+      clos (exemple : charges sociales patronales liées aux congés payés, aux primes d'intéressement ou aux gratifications à accorder au personnel).
+      Lors du paiement effectif, ce compte est soldé en contrepartie des comptes des organismes sociaux concernés, les ajustements nécessaires étant enregistrés aux comptes intéressés. Ce compte peut aussi être contre-passé à l'ouverture de l'exercice qui suit.
+    children:
+    - id: 431
+      label: Organismes sociaux A
+      parent: 43
+    - id: 432
+      label: Organismes sociaux B
+      parent: 43
+    - id: 438
+      label: Organismes sociaux charges à payer
+      parent: 43
       children:
-        - id: 481
-          label: Provisions - Passifs courants
-          parent: 48
-        - id: 486
-          label: Charges constatées d'avance
-          parent: 48
-        - id: 487
-          label: Produits constatés d'avance
-          parent: 48
-    - id: 49
-      label: Pertes de valeur sur compte de tiers
-      parent: 4
+      - id: 4382
+        label: Charges sociales sur congés à payer
+        parent: 438
+      - id: 4386
+        label: Charges sociales à payer
+        parent: 438
+      - id: 4387
+        label: Produits à recevoir
+        parent: 438
+  - id: 44
+    label: Etat, collectivités publiques, organismes internationaux
+    parent: 4
+    description: |-
+      D'une manière générale , les opérations à inscrire au compte 44 " Etat, collectivités publiques, organismes internationaux et comptes rattachés " sont celles qui sont faites avec des entités à caractère officiel, considérées en tant que puissance publique. Par conséquent les ventes et les achats conclus avec ces entités à des conditions courantes et normales s'inscrivent au compte 40 " Fournisseurs et comptes rattachés " et 41 " Clients et comptes rattachés " au même titre que les opérations faites avec les autres fournisseurs et les autres clients.
+      Ce compte peut être subdivisé en fonction des besoins en sous comptes tels que :
+      • Etat, impôt sur les bénéfices ;
+      • Etat, taxe sur la valeur ajoutée ;
+      • Etat et autres collectivités publiques, subventions à recevoir ;
+      • Etat - autres impôts et taxes ;
+      • Organismes Internationaux ;
+      • Etat - charges à payer et produits à recevoir ;
+      • Etat - Impôt différé.
+      Le compte " Etat, impôt sur les bénéfices " est crédité du montant de l'impôt sur les bénéfices exigible en contrepartie des comptes 69. Il est débité du montant des règlements effectués, en contrepartie d'un compte de trésorerie.
+      Le compte " Etat - taxe sur la valeur ajoutée " reçoit :
+      • d'une part, le montant de la TVA collectée pour le compte de l'Etat (en contrepartie des ventes effectuées et des livraisons effectuées à soi-même) ;
+      • d'autre part, le montant de la TVA à récupérer selon les dispositions légales en contrepartie des achats effectués.
+      Au moment de leur exigibilité, les subdivisions " TVA collectée " et " TVA déductible " sont soldées :
+      • soit en contrepartie de la subdivision du compte 44 - " TVA à payer” s'il en résulte un solde créditeur ;
+      • soit en contrepartie de la subdivision du compte 44 "Crédit de TVA”, s'il en résulte un solde débiteur à récupérer ultérieurement (par imputation sur la TVA à payer ou par demande de remboursement effectif).
+      Une subdivision du compte 44 " TVA à régulariser " est destinée à recevoir le montant de TVA déductible sur les charges à payer inscrites aux comptes de tiers concernés et le montant de la TVA collectée sur les produits à recevoir inscrits aux comptes de tiers concernés.
+      Cette subdivision fait l'objet d'un virement aux subdivisions "TVA collectée " et " TVA déductible " lors de leur fait générateur fiscal, compte tenu des ajustements nécessaires enregistrés aux comptes intéressés. Ce compte peut aussi être contre-passé à l'ouverture de l'exercice qui suit.
+      La subdivision du compte 44 “Etat et autres collectivités publiques - subventions à recevoir “ est débitée en fin d'exercice des subventions acquises mais non encore encaissées par le crédit d'un compte de produits (subventions d'exploitation) ou de produits comptabilisés d'avance (subvention d'investissement).
+      Ce compte est soldé en contrepartie d'un compte de trésorerie lors de la perception des montants concernés.
+      Les subventions publiques doivent normalement être comptabilisées en produits sur l'exercice auquel se rattachent les coûts qu'elles sont censées compenser.
+      Cependant, ce rattachement n'autorise pas la comptabilisation en subventions à recevoir de subventions non encore acquises, c'est à dire qui ne correspondent pas à une obligation pour la partie versante ou pour lesquelles l'entreprise ne répond pas encore aux conditions d'octroi à la clôture de l'exercice
+      Les comptes " Etat - autres impôts et taxes " sont crédités du montant de tous les autres impôts et taxes versés par l'entité, par le débit des
+      comptes de charges intéressés. Ils sont débités du montant, des règlements effectués, en contrepartie d'un compte de trésorerie.
+      Une subdivision du compte 44 “organismes internationaux” doit être ouverte par les entités, généralement des ONG, qui concluent des conventions de financement de projet directement avec des organismes internationaux ou avec l'Etat. Sont alors comptabilisées dans cette subdivision du compte 44, toutes les opérations effectuées avec ces organismes, à l'exception de celles faites en tant que fournisseur ou client qui sont inscrites respectivement aux comptes 40 " Fournisseurs " ou 41 " Clients ".
+      Dans ce contexte, le mode de fonctionnement de ce compte dépend des clauses contractuelles et de l'organisation comptable prévue dans le cadre de la convention conclue avec l'organisme, et de la nature du projet financé ; en effet l'entité peut soit agir en son propre nom, soit agir en simple mandataire du bailleur de fonds.
+      Les comptes " Etat - charges à payer et produits à recevoir " sont mouvementés à la clôture de l'exercice pour permettre l'enregistrement des charges et des produits rattachables à l'exercice clos (exemple : charges fiscales patronales liées aux congés à payer, aux primes d'intéressement ou aux gratifications à accorder au personnel).
+      Lors du paiement effectif, ces comptes sont soldés en contrepartie des comptes 44 concernés , les ajustements nécessaires étant enregistrés aux comptes intéressés. Ces comptes peuvent aussi être contre-passés à l'ouverture de l'exercice qui suit.
+      Les comptes " Etat - impôt différé " sont destinés à recevoir le montant calculé d'impôt différé. Ils enregistrent les impositions différées actives et passives déterminées à chaque clôture d'exercice sur la base de la réglementation fiscale en vigueur à la date de clôture, sans calcul d'actualisation, et résultant :
+      • d'un décalage temporaire entre la constatation d'un produit ou d'une charge en comptabilité et sa prise en compte dans la base fiscale ;
+      • de déficits fiscaux ou de crédits d'impôts reportables dans la mesure où leur imputation sur des bénéfices fiscaux ou des impôts futurs est probable.
+      Au niveau des états financiers, il est nécessaire de présenter distinctement :
+      • les actifs et passifs d'impôt des autres actifs et passifs,
+      • les charges (et produits) d'impôt des autres charges (et produits),
+      • les actifs, passifs, charges et produits d'impôt différé des actifs, passifs, charges et produits d'impôt exigible.
+      Une compensation débit / crédit est possible au niveau de la présentation du bilan et du compte de résultat uniquement lorsque :
+      • les débits et les crédits relèvent de la même administration fiscale pour la même entité imposable ;
+      • il existe un droit juridiquement exécutoire de compenser compte tenu de la nature et de l'origine de l'impôt concerné.
+    children:
+    - id: 441
+      label: Etat, subventions à recevoir
+      parent: 44
       children:
-        - id: 491
-          label: Pertes de valeur sur comptes de clients
-          parent: 49
-        - id: 495
-          label: Pertes de valeur sur comptes du groupe et des associés
-          parent: 49
-        - id: 496
-          label: Pertes de valeur sur comptes de débiteurs divers
-          parent: 49
+      - id: 4411
+        label: Subventions d'investissement
+        parent: 441
+      - id: 4417
+        label: Subventions d'exploitation
+        parent: 441
+    - id: 442
+      label: Etat, impôts et taxess recouvrables sur des tiers
+      parent: 44
+    - id: 443
+      label: Opérations particulières avec l'Etat et autres organismes publics
+      parent: 44
+    - id: 444
+      label: Etat, impôts sur les résultats
+      parent: 44
+    - id: 445
+      label: Etat, taxes sur les chiffres d'affaires
+      parent: 44
+      children:
+      - id: 4454
+        label: Crédit de taxes
+        parent: 445
+      - id: 4455
+        label: Taxes sur le chiffre d'affaires à décaisser
+        parent: 445
+      - id: 4456
+        label: Taxes sur le chiffre d'affaires déductibles
+        parent: 445
+      - id: 4457
+        label: Taxes sur le chiffre d'affaire collectées ou en attente
+        parent: 445
+    - id: 447
+      label: Autres impôts, taxes et versements assimilés
+      parent: 44
+    - id: 448
+      label: Etat, charges à payer et produits à recevoir
+      parent: 44
+      children:
+      - id: 4486
+        label: Charges à payer
+        parent: 448
+      - id: 4487
+        label: Produits à recevoir
+        parent: 448
+  - id: 45
+    label: Groupes et assoicués
+    parent: 4
+    description: |-
+      Ce compte peut présenter les subdivisions suivantes :
+      • Groupe ;
+      • Associés - comptes courants ;
+      • Associés - opérations sur le capital ;
+      • Associés - dividendes à payer ;
+      • Associés - opérations faites en commun ou en groupement.
+      Le compte “Groupe et associés” ne doit pas enregistrer les opérations effectuées en tant que fournisseur ou client qui sont inscrites respectivement aux comptes 40 " Fournisseurs " ou 41 " Clients ".
+      Le compte " Groupe " enregistre à son débit le montant des fonds avancés directement ou indirectement de façon temporaire par l'entité aux entités du groupe, et à son crédit le montant des fonds mis directement ou indirectement à disposition de l'entité par les entités du groupe.
+      Le compte 455 "Associés - comptes courants" enregistre à son crédit le montant des fonds mis ou laissés temporairement à la disposition de l'entité par les associés. Des subdivisions pour les " Intérêts courus " doivent recevoir à la clôture de l'exercice le montant des intérêts courus non échus.
+      Le compte " Associés - opérations sur le capital" est destiné à recevoir le montant des apports effectués par les associés (au crédit). Il est soldé par les comptes de capitaux intéressés.
+      Le compte "Associés - dividendes à payer " est crédité du montant des dividendes dont la distribution a été décidée par les organes compétents, par le débit selon le cas :
+      • du compte 12 " Résultat de l'exercice " ;
+      • du compte 10 " Réserves " ;
+      • du compte 11 " Report à nouveau ".
+      Le compte " Associés - opérations faites en commun ou en groupement" enregistre les opérations faites en commun.
+    children:
+    - id: 451
+      label: Opération groupe
+      parent: 45
+    - id: 455
+      label: Associés, comptes courants
+      parent: 45
+      children:
+      - id: 4551
+        label: Principal
+        parent: 455
+      - id: 4558
+        label: Intérêts courus
+        parent: 455
+    - id: 456
+      label: Assoiés, opérations sur capital
+      parent: 45
+      children:
+      - id: 4561
+        label: Associés compte d'apport en société
+        parent: 456
+        children:
+        - id: 45611
+          label: Apport en nature
+          parent: 4561
+        - id: 45615
+          label: Apport en numéraire
+          parent: 4561
+      - id: 4562
+        label: Apport Capital appelé, non versé
+        parent: 456
+        children:
+        - id: 45621
+          label: Actionnaires Capital souscrit et appelé, non versé
+          parent: 4562
+        - id: 45625
+          label: Actionnaires Capital appelé, non versé
+          parent: 4562
+      - id: 4563
+        label: Associés versement reçus sur augmentation de capital
+        parent: 456
+      - id: 4564
+        label: Associés Versements anticipés
+        parent: 456
+      - id: 4566
+        label: Actionnaires défaillants
+        parent: 456
+      - id: 4567
+        label: Associés Capital à rembourser
+        parent: 456
+    - id: 457
+      label: Associés, dividendes à payer
+      parent: 45
+    - id: 458
+      label: Assoicés, opérations faites en commun ou en groupement
+      parent: 45
+      children:
+      - id: 4587
+        label: Opérations courantes
+        parent: 458
+      - id: 4588
+        label: Intérêts courus
+        parent: 458
+  - id: 46
+    label: Débiteurs divers et créditeurs divers
+    parent: 4
+    description: |-
+      Ce compte peut présenter les subdivisions suivantes :
+      • Créances sur cessions d'immobilisations ;
+      • Créances sur cessions de titres de placement ;
+      • Dettes sur acquisitions de titres de placement ;
+      • Créances sur cessions des instruments de trésorerie ;
+      • Dettes sur acquisitions des instruments de trésorerie ;
+      • Divers - charges à payer et produits à recevoir.
+      Le compte " Créances sur cessions d'immobilisations " est débité en contrepartie d'un compte " Prix de cession des immobilisations incorporelles et corporelles " (subdivision du compte 75, autres produits de gestion courante), il est crédité en contrepartie du compte de trésorerie, lors du règlement.
+      Le compte " Créances sur cessions de titres de placement" est débité en contrepartie du compte 50 de titres de placement concernés (pour le prix de cession), il est crédité en contrepartie du compte de trésorerie, lors du règlement.
+      Le compte " Dettes sur acquisitions de titres de placement" est crédité en contrepartie du compte 50 " Titres de placement" pour le coût d'acquisition des éléments visés, il est crédité en contrepartie du compte financier concerné, lors du règlement.
+      Les comptes " Créances sur cessions des instruments de trésorerie " et "Dettes sur acquisitions des instruments de trésorerie" fonctionnent selon les mêmes modalités que les comptes relatifs aux créances et dettes relatives aux acquisitions ou cessions de titres de placement.
+      Le compte " Divers - Charges à payer et produits à recevoir " est mouvementé à la clôture de l'exercice pour permettre l'enregistrement des charges et des produits rattachables à l'exercice clos. Ces comptes se présentent TVA incluse (le montant de la TVA attachée étant porté en contrepartie de la subdivision d'un compte 44 TVA). Lors du règlement effectif, ce compte est soldé en contrepartie des autres comptes 46 concernés, les ajustements nécessaires étant enregistrés aux comptes intéressés. Ce compte peut aussi être contre-passé à l'ouverture de l'exercice qui suit.
+    children:
+    - id: 462
+      label: Créances sur cessions d'immobilisations
+      parent: 46
+    - id: 464
+      label: Dettes sur acquisitions de valeurs mobilières de placement
+      parent: 46
+    - id: 465
+      label: Créances sur cessions de valeurs mobilières de placement
+      parent: 46
+    - id: 467
+      label: Autres comptes débiteurs ou créditeurs
+      parent: 46
+    - id: 468
+      label: Divers charges à payer ou produits à recevoir
+      parent: 46
+      children:
+      - id: 4686
+        label: Charges à payer
+        parent: 468
+      - id: 4687
+        label: Produits à recevoir
+        parent: 468
+  - id: 47
+    label: Comptes transitoires ou d'attente
+    parent: 4
+    description: |-
+      Les comptes " 47 - Comptes transitoires ou d'attente " sont à la disposition des entités pour recevoir, en cours d'exercice, les opérations :
+      • qui ne peuvent être imputées de façon certaine à un compte déterminé au moment où elles doivent être enregistrées ou ;
+      • qui exigent une information complémentaire.
+      Toute opération portée au compte 47 doit être imputée au compte définitif dans les délais les plus brefs. Ce compte est normalement soldé à la clôture de l'exercice.
+  - id: 48
+    label: Charges ou produits constatés d'avance et provisions
+    parent: 4
+    description: |-
+      Ce compte peut présenter les subdivisions suivantes :
+      • Charges constatées d'avance ;
+      • Produits constatés d'avance ;
+      • Provisions courantes pour charges. Les comptes "Charges constatées d'avance" et "Produits constatés d'avance" reçoivent, à la clôture de l'exercice, les charges et les produits concernant un exercice ultérieur (pour leur montant hors TVA). Ces comptes sont soldés, et les charges et produits sont imputés dans les comptes par nature concernés, au cours de l'exercice auquel ils se rapportent en application du principe d'indépendance des exercices.
+      Provisions passifs courants
+      A la clôture des comptes de la période, les passifs dont le montant est incertain et dont l'échéance se situe probablement dans les douze mois doivent faire l'objet d'un enregistrement comptable au crédit d'un compte 48 “Provisions - passifs courants” par le débit du compte de charges 68 “Dotations aux amortissements, provisions et perte de valeur”.
+      Lorsque la charge qui a fait l'objet d'une provision est constatée, le compte de la classe 6 intéressé est débité par le crédit d'un compte financier (ou d'un compte de tiers), et le compte 48 provision est soldé par le crédit du compte de produit 78 “Reprises sur provisions et sur pertes de valeur”.
+      La provision doit être également reprise si elle s'avère sans objet.
+    children:
+    - id: 481
+      label: Provisions - Passifs courants
+      parent: 48
+    - id: 486
+      label: Charges constatées d'avance
+      parent: 48
+    - id: 487
+      label: Produits constatés d'avance
+      parent: 48
+  - id: 49
+    label: Pertes de valeur sur compte de tiers
+    parent: 4
+    description: |-
+      Lors de leur constitution, les pertes de valeur sur comptes de tiers sont créditées aux comptes 49 créés par nature de créances concernées :
+      • pertes de valeur sur comptes de clients ;
+      • pertes de valeur sur comptes de groupe et associés ;
+      • pertes de valeur sur comptes de débiteurs divers. En contrepartie, les comptes de dotations sont débités.
+      Le compte de perte de valeur relatif à chaque compte de tiers est réajusté à la fin de chaque exercice par :
+      • le débit des comptes de dotations correspondants, lorsque le montant de la perte de valeur doit être augmenté ;
+      • le crédit d'un compte 78 " Reprises sur pertes de valeur et provision" lorsque le montant de la perte de valeur doit être diminué ou annulé (perte de valeur devenue, en tout ou partie, sans objet).
+    children:
+    - id: 491
+      label: Pertes de valeur sur comptes de clients
+      parent: 49
+    - id: 495
+      label: Pertes de valeur sur comptes du groupe et des associés
+      parent: 49
+    - id: 496
+      label: Pertes de valeur sur comptes de débiteurs divers
+      parent: 49
 - id: 5
   label: Comptes financiers
   parent: null
   children:
-    - id: 50
-      label: Valeurs mobilières de placement
-      parent: 5
+  - id: 50
+    label: Valeurs mobilières de placement
+    parent: 5
+    description: |-
+      Les comptes "Titres de placements" sont débités du coût d'acquisition des titres, en contrepartie des comptes de tiers ou de trésorerie concernés. En cas de titres de placement dont la valeur nominale est partiellement libérée, la valeur totale est portée au débit de ces comptes, la partie non appelée étant inscrite au crédit dans une subdivision du compte 50 " Versements à effectuer sur titres de placement non libérés " (ce compte étant ensuite soldé au fur et à mesure des montants appelés versés, en contrepartie des comptes de trésorerie).
+      Les titres de placement sont des actifs financiers détenus à des fins de transaction et évalués à chaque clôture d'exercice à la juste valeur. La différence entre cette juste valeur et la valeur des titres figurant en comptabilité est enregistrée :
+      • au débit du compte 50 en contrepartie d'un compte " Plus-values sur titres de placement " (subdivision d'un compte 76), s'il s'agit d'une plus-value ;
+      • au crédit du compte 50 en contrepartie du compte " Moins-values sur titres de placement ", (subdivision d'un compte 66), s'il s'agit d'une moins-value.
+      En cas de cession des titres de placement, le solde du compte 50 (valeur comptable au débit et prix de cession au crédit) est viré :
+      • en contrepartie du débit d'un compte de charges financières " Moins-values sur titre de placement ", s'il s'agit d'une moins-value de cession ;
+      • en contrepartie du crédit d'un compte de produits financiers " Plus-values sur titres de placement ", s'il s'agit d'une plus-value de cession.
+      A la clôture de l'exercice, les intérêts courus non échus sur les titres de placement sont portés au débit d'un compte " Intérêts courus sur titres de placement" (subdivision du compte 50). Ce compte est soldé à l'échéance définitive.
+    children:
+    - id: 501
+      label: Parts dans les entreprises liées
+      parent: 50
+    - id: 502
+      label: Prêts à court terme
+      parent: 50
+    - id: 503
+      label: Actions
+      parent: 50
+    - id: 504
+      label: Autres titres conférant un droit de propriété
+      parent: 50
+    - id: 505
+      label: Obligations et bons de caisse à court terme
+      parent: 50
+    - id: 508
+      label: Autres valeurs mobilières de placement et crénaces assimilés
+      parent: 50
       children:
-        - id: 501
-          label: Parts dans les entreprises liées
-          parent: 50
-        - id: 502
-          label: Prêts à court terme
-          parent: 50
-        - id: 503
-          label: Actions
-          parent: 50
-        - id: 504
-          label: Autres titres conférant un droit de propriété
-          parent: 50
-        - id: 505
-          label: Obligations et bons de caisse à court terme
-          parent: 50
-        - id: 508
-          label: Autres valeurs mobilières de placement et crénaces assimilés
-          parent: 50
-          children:
-            - id: 5088
-              label: 'Intérêts courus sur obligations, bons et valeurs assimilés'
-              parent: 508
-        - id: 509
-          label: Versements restant àeffectuer sur MVP non libérées
-          parent: 50
-    - id: 51
-      label: 'Banque, établissements financièrs et assimilés'
-      parent: 5
+      - id: 5088
+        label: Intérêts courus sur obligations, bons et valeurs assimilés
+        parent: 508
+    - id: 509
+      label: Versements restant àeffectuer sur MVP non libérées
+      parent: 50
+  - id: 51
+    label: Banque, établissements financièrs et assimilés
+    parent: 5
+    description: |-
+      Pour chaque compte bancaire dont elle est titulaire, l'entité utilise une subdivision distincte du compte 51 " Comptes bancaires ". Les mouvements débiteurs correspondent aux fonds reçus et les mouvements créditeurs aux fonds décaissés.
+      Les intérêts courus non échus à la clôture de l'exercice sont portés dans un compte " Intérêts courus " (subdivision du compte 51). Ce compte est soldé lors de l'échéance définitive. Les concours bancaires courants tels que les crédits sur escompte s'enregistrent au débit du compte banque concerné par le crédit d'un compte " Concours bancaires courants " (subdivision du compte 51).
+      Les remboursements effectués s'enregistrent par une écriture inverse.
+    children:
+    - id: 511
+      label: Valeurs à l'encaissement
+      parent: 51
       children:
-        - id: 511
-          label: Valeurs à l'encaissement
-          parent: 51
-          children:
-            - id: 5112
-              label: Chèques à encaisser
-              parent: 511
-        - id: 512
-          label: Banques comptes courants
-          parent: 51
-          children:
-            - id: 5121
-              label: Compte en monnaie nationale
-              parent: 512
-            - id: 5124
-              label: Compte en devise
-              parent: 512
-        - id: 515
-          label: Caisse du Trésor public et établissements publics
-          parent: 51
-        - id: 516
-          label: Emprunts à court terme
-          parent: 51
-        - id: 517
-          label: Autres organismes financiers
-          parent: 51
-          children:
-            - id: 5171
-              label: Centre Chèques Postaux
-              parent: 517
-        - id: 518
-          label: Intérêts courus
-          parent: 51
-          children:
-            - id: 5181
-              label: Intérêts courus à payer
-              parent: 518
-            - id: 5188
-              label: Intérêts courus à recevoir
-              parent: 518
-        - id: 519
-          label: Concours bancaires courants
-          parent: 51
-          children:
-            - id: 5198
-              label: Intérêts courus
-              parent: 519
-    - id: 52
-      label: Instruments de trésorerie
-      parent: 5
-    - id: 53
-      label: Caisse
-      parent: 5
-    - id: 54
-      label: Régies d'avance et accréditifs
-      parent: 5
-    - id: 55
-      label: null
-      parent: 5
-    - id: 56
-      label: null
-      parent: 5
-    - id: 57
-      label: null
-      parent: 5
-    - id: 58
-      label: Virements internes
-      parent: 5
+      - id: 5112
+        label: Chèques à encaisser
+        parent: 511
+    - id: 512
+      label: Banques comptes courants
+      parent: 51
       children:
-        - id: 581
-          label: Virements de fonds
-          parent: 58
-        - id: 588
-          label: Autres virements internes
-          parent: 58
-    - id: 59
-      label: Pertes de valeur sur comptes financiers
-      parent: 5
+      - id: 5121
+        label: Compte en monnaie nationale
+        parent: 512
+      - id: 5124
+        label: Compte en devise
+        parent: 512
+    - id: 515
+      label: Caisse du Trésor public et établissements publics
+      parent: 51
+    - id: 516
+      label: Emprunts à court terme
+      parent: 51
+    - id: 517
+      label: Autres organismes financiers
+      parent: 51
       children:
-        - id: 591
-          label: Pertes de valeur sur valeurs en banque et établissements financiers
-          parent: 59
-        - id: 594
-          label: Pertes de valeur sur régies d'avance et accréditifs
-          parent: 59
+      - id: 5171
+        label: Centre Chèques Postaux
+        parent: 517
+    - id: 518
+      label: Intérêts courus
+      parent: 51
+      children:
+      - id: 5181
+        label: Intérêts courus à payer
+        parent: 518
+      - id: 5188
+        label: Intérêts courus à recevoir
+        parent: 518
+    - id: 519
+      label: Concours bancaires courants
+      parent: 51
+      children:
+      - id: 5198
+        label: Intérêts courus
+        parent: 519
+  - id: 52
+    label: Instruments de trésorerie
+    parent: 5
+    description: |-
+      Lors de l'acquisition des instruments de trésorerie, le coût d'acquisition est enregistré au débit du compte 52 " Instruments de trésorerie ", en distinguant éventuellement dans des sous comptes la nature de ces instrument (instruments financiers immédiatement négociables sur un marché assurant la liquidité et la sécurité des transactions, instruments de couverture, autres instruments financiers), en contrepartie des comptes d'instruments de trésorerie et assimilés concernés.
+      Pour les instruments financiers immédiatement négociables qui sont évalués à la valeur de marché à la date de clôture des comptes, la différence entre cette valeur et la valeur des titres figurant en comptabilité est enregistrée :
+      • au débit du compte 52 en contrepartie d'un compte " Autres produits financiers " (subdivision du compte 76), s'il s'agit d'une plus-value ;
+      • au crédit du compte 52 en contrepartie d'un compte " Autres charges financières " (subdivision du compte 66), s'il s'agit d'une moins-value.
+      En cas de cession des instruments financiers : le solde du compte 52 (valeur comptable au débit et prix de cession au crédit) est viré :
+      • en contrepartie du débit d'une subdivision du compte 66 " Autres charges financières ", s'il s'agit d'une moins-value de cession ;
+      • en contrepartie du crédit d'une subdivision du compte 76 " Autres produits financiers ", s'il s'agit d'une plus-value de cession.
+  - id: 53
+    label: Caisse
+    parent: 5
+    description: Ce compte est débité du montant des espèces encaissés par l'entité. Il est crédité du montant des espèces décaissés. Son solde est toujours débiteur ou nul.
+  - id: 54
+    label: Régies d'avance et accréditifs
+    parent: 5
+    description: |-
+      Le compte 54 " Régies d'avances et accréditifs " enregistre, le cas échéant, les écritures relatives aux fonds gérés par les régisseurs ou les comptables subordonnés et aux accréditifs ouverts dans les banques au nom d'un tiers ou d'un agent de l'entité.
+      Ce compte est débité du montant des fonds remis aux régisseurs et aux titulaires d'accréditifs par le crédit d'un compte de trésorerie. Il est crédité :
+      • du montant des dépenses effectuées pour le compte de l'entité par le débit d'un compte de tiers ou de charges ;
+      • du montant des reversements de fonds avancés, par le débit d'un compte de trésorerie.
+  - id: 55
+    label: null
+    parent: 5
+  - id: 56
+    label: null
+    parent: 5
+  - id: 57
+    label: null
+    parent: 5
+  - id: 58
+    label: Virements internes
+    parent: 5
+    description: |-
+      Le compte 58 " Virements internes " est un compte de passage utilisé pour la comptabilisation d'opérations au terme desquelles il doit se trouver soldé.
+      Ce compte est notamment destiné à permettre la centralisation, sans risque de double emploi :
+      • des virements de fonds d'un compte de trésorerie (caisse ou banque) à un autre compte de trésorerie (banque ou caisse) ;
+      • et, plus généralement, de toute opération devant faire l'objet d'un enregistrement dans plusieurs journaux auxiliaires.
+    children:
+    - id: 581
+      label: Virements de fonds
+      parent: 58
+    - id: 588
+      label: Autres virements internes
+      parent: 58
+  - id: 59
+    label: Pertes de valeur sur comptes financiers
+    parent: 5
+    description: |-
+      La nature et le fonctionnement du compte 59 est comparable à celui du compte 49 : ce sont des comptes de correction de valeur, qui permettent de ramener la valeur comptable d'un actif à sa valeur recouvrable.
+      En effet, comme tout autre actif, un actif financier non évalué à sa juste valeur à la clôture de la période doit être déprécié si sa valeur comptable est supérieure à sa valeur recouvrable. Les actifs financiers non évalués à leur juste valeur et devant donc être soumis à un test de dépréciation afin de constater une éventuelle perte de valeur correspondent :
+      • aux prêts et créances émis par l'entreprise et non détenus à des fins de transaction ;
+      • aux placements détenus jusqu'à leur échéance ;
+      • à tout actif financier qui n'a pas de prix cotés sur un marché actif et dont la juste valeur ne peut être évaluée de façon fiable.
+      Lors de leur constitution, les provisions pour la dépréciation des actifs enregistrés dans des comptes d'instruments de trésorerie et assimilés sont crédités au compte 59 "Pertes de valeur des comptes d'instruments de trésorerie et assimilés".
+      En contrepartie, le compte de dotation financière doit être débité.
+      Le compte de provision relatif aux comptes d'instruments de trésorerie et assimilés qui ne font pas l'objet d'une évaluation à leur juste valeur est réajusté à la fin de chaque exercice par :
+      • le débit du compte de dotations, lorsque le montant de la provision doit être augmenté ;
+      • le crédit du compte de reprise financière, lorsque le montant de la provision doit être diminué ou annulé (provision devenue, en tout ou partie, sans objet).
+      A la date de la cession d'un instrument de trésorerie ou assimilé, la perte de valeur antérieurement constituée est soldée par le crédit du compte 78 (reprise sur provision).
+    children:
+    - id: 591
+      label: Pertes de valeur sur valeurs en banque et établissements financiers
+      parent: 59
+    - id: 594
+      label: Pertes de valeur sur régies d'avance et accréditifs
+      parent: 59
 - id: 6
   label: Comptes de charges
   parent: null
+  description: |-
+    Les produits et charges sont présentés dans le compte de résultat soit par fonction, soit par nature. Cependant, une ventilation des produits et charges en comptabilité par nature, sur la base d'une nomenclature de compte imposée, est obligatoire. Aussi, une entité qui présente un compte de résultat par fonction doit-elle présenter dans l'annexe une ventilation des produits et charges par nature, faisant apparaître les agrégats de gestion suivants : marge brute, valeur ajoutée et excédent brut d'exploitation. Les comptes prévus pour l'enregistrement comptable des charges par nature sont présentés ci-après.
+    Cas de l'analyse des charges par fonction : Les mêmes principes s'appliquent au fonctionnement des comptes dans le cas où les charges et produits de l'entité font l'objet d'une analyse par fonction et non exclusivement par nature.
+    L'analyse par fonction doit être opérée selon les spécificités propres à chaque entité. Les regroupements de charge rencontrés les plus fréquemment sont les suivants :
+    • Regroupement par fonction économique ou par activités ; exemple : Achats, production, distribution, administration ;
+    • Regroupement par moyen d'exploitation ; exemple : magasin, usine, bureau ;
+    • Regroupement par produits ou services ; exemple : chantiers ou type de chantiers ;
+    • Regroupement par centre de responsabilité ; exemple : direction générale, administration, direction commerciale, service études, service technique ;
+    • Regroupement par zone géographique.
+    Compte tenu de l'obligation de faire apparaître, soit dans le compte de résultat, soit dans l'annexe aux états financiers des informations concernant le montant de certaines charges par nature, le suivi des comptes de charge par fonction est le plus souvent effectué par une méthode de codification multiple : chaque charge fait l'objet, lors de son enregistrement en comptabilité d'une double imputation sur la base d'une codification par nature d'une part, et d'une codification par fonction, d'autre part.
   children:
-    - id: 60
-      label: Achats consommés
-      parent: 6
+  - id: 60
+    label: Achats consommés
+    parent: 6
+    description: 'Les comptes 60 (Matières premières consommées, Matières et fournitures consommées, Marchandises vendues) relatifs à des achats stockés consommés, fonctionnent différemment selon le système d''inventaire mis en place dans l''entité : inventaire intermittent ou inventaire permanent. Le fonctionnement de ces comptes a été précisé au niveau du fonctionnement des comptes de stocks (classe 3). L''évaluation des stocks consommés est opérée au coût d''acquisition, les frais accessoires d''achat (transports, commissions, assurances, …) venant se rajouter au prix d''achat, net de rabais, remises et ristournes obtenus. Les achats d''études et autres prestations de service ainsi que les achats d''équipements et de travaux directement incorporés aux ouvrages, travaux ou produits fabriqués par l''entité sont enregistrés dans les comptes 60. Les achats non stockables (eau, énergie, …) ou non stockés par l''entité, tels ceux afférents à des fournitures qui ne passent pas par un compte de magasin, sont également enregistrés en compte 60 Achats consommés. Les éléments enregistrés en achats (compte 60) mais non consommés à la clôture de l''exercice sont inscrits en tant que charges constatées d''avance au débit du compte 48.'
+    children:
+    - id: 601
+      label: Matières premières
+      parent: 60
+    - id: 602
+      label: Autres approvisionnements
+      parent: 60
       children:
-        - id: 601
-          label: Matières premières
-          parent: 60
-        - id: 602
-          label: Autres approvisionnements
-          parent: 60
-          children:
-            - id: 6021
-              label: Matières consommables
-              parent: 602
-            - id: 6022
-              label: Fournitures consommables
-              parent: 602
-            - id: 6026
-              label: Emballages
-              parent: 602
-              children:
-                - id: 60261
-                  label: Emballages perdus
-                  parent: 6026
-                - id: 60265
-                  label: Emballages récupérables
-                  parent: 6026
-        - id: 603
-          label: Variations de stocks
-          parent: 60
-          children:
-            - id: 6031
-              label: Variations des stocks de matières premières et fournitures
-              parent: 603
-            - id: 6032
-              label: Variations des stocks des autres approvisionnements
-              parent: 603
-            - id: 6037
-              label: Variations des stocks de marchandises
-              parent: 603
-        - id: 604
-          label: Achats d'études et de prestations de services
-          parent: 60
-        - id: 605
-          label: 'Achats de matériels, équipement et travaux'
-          parent: 60
-        - id: 606
-          label: Achats non stockées de matières et fournitures
-          parent: 60
-          children:
-            - id: 6061
-              label: Eau et éléctricité
-              parent: 606
-            - id: 6062
-              label: Carburants et lubrifiants
-              parent: 606
-            - id: 6063
-              label: Fournitures d'entretien et de petit équipement
-              parent: 606
-            - id: 6064
-              label: Fournitures administratifs
-              parent: 606
-            - id: 6068
-              label: Autres matières et fournitures
-              parent: 606
-        - id: 607
-          label: Achats de marchandises
-          parent: 60
-        - id: 608
-          label: Frais accessoires d'achat
-          parent: 60
-        - id: 609
-          label: 'Rabais, remises, ristournes obtenus sur achats'
-          parent: 60
-          children:
-            - id: 6091
-              label: Matères premières et fournitures
-              parent: 609
-            - id: 6092
-              label: Autres approvisionnements stockées
-              parent: 609
-            - id: 6094
-              label: Etudes et prestations de services
-              parent: 609
-            - id: 6095
-              label: 'Matériels, équipements et travaux'
-              parent: 609
-            - id: 6096
-              label: Approvisionnements stockés
-              parent: 609
-            - id: 6097
-              label: Marchandises
-              parent: 609
-    - id: 61
-      label: Services extérieurs
-      parent: 6
+      - id: 6021
+        label: Matières consommables
+        parent: 602
+      - id: 6022
+        label: Fournitures consommables
+        parent: 602
+      - id: 6026
+        label: Emballages
+        parent: 602
+        children:
+        - id: 60261
+          label: Emballages perdus
+          parent: 6026
+        - id: 60265
+          label: Emballages récupérables
+          parent: 6026
+    - id: 603
+      label: Variations de stocks
+      parent: 60
       children:
-        - id: 611
-          label: Sous-traitance générale
-          parent: 61
-        - id: 612
-          label: null
-          parent: 61
-        - id: 613
-          label: Locations
-          parent: 61
-          children:
-            - id: 6132
-              label: Locations immobilières
-              parent: 613
-            - id: 6135
-              label: Locations mobilières
-              parent: 613
-            - id: 6136
-              label: Malis sur emballages
-              parent: 613
-        - id: 614
-          label: Charges locatives et charges de copropriété
-          parent: 61
-        - id: 615
-          label: 'Entretien, réparations et maintenances'
-          parent: 61
-        - id: 616
-          label: Primes d'assurances
-          parent: 61
-        - id: 617
-          label: Etudes et recherches
-          parent: 61
-        - id: 618
-          label: Documents et divers
-          parent: 61
-          children:
-            - id: 6181
-              label: Documentation générale
-              parent: 618
-            - id: 6182
-              label: Documentation technique
-              parent: 618
-            - id: 6183
-              label: 'Frais de colloques, séminaires, conférences'
-              parent: 618
-        - id: 619
-          label: 'Rabais, remises, ristournes obtenus sur services extérieurs'
-          parent: 61
-    - id: 62
-      label: Autres services extérieurs
-      parent: 6
+      - id: 6031
+        label: Variations des stocks de matières premières et fournitures
+        parent: 603
+      - id: 6032
+        label: Variations des stocks des autres approvisionnements
+        parent: 603
+      - id: 6037
+        label: Variations des stocks de marchandises
+        parent: 603
+    - id: 604
+      label: Achats d'études et de prestations de services
+      parent: 60
+    - id: 605
+      label: Achats de matériels, équipement et travaux
+      parent: 60
+    - id: 606
+      label: Achats non stockées de matières et fournitures
+      parent: 60
       children:
-        - id: 621
-          label: Personnel exterieur à l'entreprise
-          parent: 62
-        - id: 622
-          label: Rémunérations d'intermédiaires et honoraires
-          parent: 62
-          children:
-            - id: 6221
-              label: Commissions et courtages sur achats
-              parent: 622
-            - id: 6222
-              label: Commissions et courtages sur ventes
-              parent: 622
-            - id: 6224
-              label: Rémunérations des transitaires
-              parent: 622
-            - id: 6225
-              label: Rémunérations d'affacturages
-              parent: 622
-            - id: 6226
-              label: Honoraires
-              parent: 622
-            - id: 6227
-              label: Frais d'actes et de contentieux
-              parent: 622
-            - id: 6228
-              label: Divers
-              parent: 622
-        - id: 623
-          label: 'Publicité, publication, relations publiques'
-          parent: 62
-          children:
-            - id: 6231
-              label: Annonces et insértions
-              parent: 623
-            - id: 6232
-              label: Echantillons
-              parent: 623
-            - id: 6233
-              label: Foires et expositions
-              parent: 623
-            - id: 6234
-              label: Cadeaux à la clientèle
-              parent: 623
-            - id: 6235
-              label: Primes
-              parent: 623
-            - id: 6236
-              label: Catalogues et imprimés
-              parent: 623
-            - id: 6237
-              label: Publications
-              parent: 623
-            - id: 6238
-              label: Divers
-              parent: 623
-        - id: 624
-          label: Transports de biens et transports collectifs du personnel
-          parent: 62
-          children:
-            - id: 6241
-              label: Transports sur achats
-              parent: 624
-            - id: 6242
-              label: Transports sur ventes
-              parent: 624
-            - id: 6243
-              label: Transports entre établissements ou chantiers
-              parent: 624
-            - id: 6244
-              label: Transports administratifs
-              parent: 624
-            - id: 6247
-              label: Transports collectifs du personnel
-              parent: 624
-            - id: 6248
-              label: Divers
-              parent: 624
-        - id: 625
-          label: 'Déplacements, missions et réceptions'
-          parent: 62
-          children:
-            - id: 6251
-              label: Voyages et déplacements
-              parent: 625
-            - id: 6255
-              label: Frais de déménagements
-              parent: 625
-            - id: 6256
-              label: Missions
-              parent: 625
-            - id: 6257
-              label: Réceptions
-              parent: 625
-        - id: 626
-          label: Frais postaux et télécommunications
-          parent: 62
-          children:
-            - id: 6261
-              label: Affranchissement
-              parent: 626
-            - id: 6262
-              label: Redevances téléphoniques et télégrammes
-              parent: 626
-        - id: 627
-          label: Services bancaires et assimilés
-          parent: 62
-          children:
-            - id: 6271
-              label: Frais sur titres
-              parent: 627
-            - id: 6272
-              label: Commissions et frais sur émission d'emprunt
-              parent: 627
-            - id: 6275
-              label: Frais sur effets
-              parent: 627
-            - id: 6276
-              label: Location de coffres
-              parent: 627
-            - id: 6278
-              label: Autres frais et commissions sur prestations de services
-              parent: 627
-        - id: 628
-          label: Cotisations et divers
-          parent: 62
-        - id: 629
-          label: 'Rabais, remises, ristournes obtenus sur autres services extérieurs'
-          parent: 62
-    - id: 63
-      label: 'Impôts, taxes et versements assimilés'
-      parent: 6
+      - id: 6061
+        label: Eau et éléctricité
+        parent: 606
+      - id: 6062
+        label: Carburants et lubrifiants
+        parent: 606
+      - id: 6063
+        label: Fournitures d'entretien et de petit équipement
+        parent: 606
+      - id: 6064
+        label: Fournitures administratifs
+        parent: 606
+      - id: 6068
+        label: Autres matières et fournitures
+        parent: 606
+    - id: 607
+      label: Achats de marchandises
+      parent: 60
+    - id: 608
+      label: Frais accessoires d'achat
+      parent: 60
+    - id: 609
+      label: Rabais, remises, ristournes obtenus sur achats
+      parent: 60
       children:
-        - id: 631
-          label: 'Impôts, taxes et versements assimilés sur rémunérations'
-          parent: 63
-        - id: 635
-          label: Autres impôts et taxes
-          parent: 63
-    - id: 64
-      label: Charges de personnel
-      parent: 6
+      - id: 6091
+        label: Matères premières et fournitures
+        parent: 609
+      - id: 6092
+        label: Autres approvisionnements stockées
+        parent: 609
+      - id: 6094
+        label: Etudes et prestations de services
+        parent: 609
+      - id: 6095
+        label: Matériels, équipements et travaux
+        parent: 609
+      - id: 6096
+        label: Approvisionnements stockés
+        parent: 609
+      - id: 6097
+        label: Marchandises
+        parent: 609
+  - id: 61
+    label: Services extérieurs
+    parent: 6
+    description: |-
+      Les comptes 61 et 62 enregistrent les charges externes autres que les achats en provenance des tiers. Le grand nombre de catégories de charges constituant les charges externes a conduit à l'utilisation de deux comptes divisionnaires, 61 et 62.
+      Ces deux comptes sont généralement regroupés sur une même ligne au niveau du compte de résultat.
+    children:
+    - id: 611
+      label: Sous-traitance générale
+      parent: 61
+    - id: 612
+      label: null
+      parent: 61
+    - id: 613
+      label: Locations
+      parent: 61
       children:
-        - id: 641
-          label: Rémunérations du personnel
-          parent: 64
-          children:
-            - id: 6411
-              label: 'Salaires, appointements'
-              parent: 641
-            - id: 6412
-              label: Congés payés
-              parent: 641
-            - id: 6413
-              label: Primes et gratifications
-              parent: 641
-            - id: 6414
-              label: Indemnités et avantages divers
-              parent: 641
-            - id: 6415
-              label: Supplément familial
-              parent: 641
-        - id: 644
-          label: Rémunérations des dirigeants
-          parent: 64
-        - id: 645
-          label: Cotisations aux organismes sociaux
-          parent: 64
-        - id: 646
-          label: Charges sociales sur rémunérations des dirigeants
-          parent: 64
-        - id: 647
-          label: Autres charges sociales
-          parent: 64
-        - id: 648
-          label: Autres charges de personnel
-          parent: 64
-    - id: 65
-      label: Autres charges des activités ordinaires
-      parent: 6
+      - id: 6132
+        label: Locations immobilières
+        parent: 613
+      - id: 6135
+        label: Locations mobilières
+        parent: 613
+      - id: 6136
+        label: Malis sur emballages
+        parent: 613
+    - id: 614
+      label: Charges locatives et charges de copropriété
+      parent: 61
+    - id: 615
+      label: Entretien, réparations et maintenances
+      parent: 61
+    - id: 616
+      label: Primes d'assurances
+      parent: 61
+    - id: 617
+      label: Etudes et recherches
+      parent: 61
+    - id: 618
+      label: Documents et divers
+      parent: 61
       children:
-        - id: 651
-          label: >-
-            Redevances pour concessions, brevets, licences, logiciels et valeurs
-            similaires
-          parent: 65
-        - id: 652
-          label: Moins-values sur cessions d'actifs non courants
-          parent: 65
-        - id: 653
-          label: Jetons de présence
-          parent: 65
-        - id: 654
-          label: Pertes sur créances irrécouvrables
-          parent: 65
-        - id: 655
-          label: Quote-part de résultat sur opérations faites en commun
-          parent: 65
-        - id: 656
-          label: 'Amendes et pénalités, subventions accordées, dons et libéralités'
-          parent: 65
-        - id: 657
-          label: Charges exceptionnelles de gestion courante
-          parent: 65
-        - id: 658
-          label: Autres charges de gestion courante
-          parent: 65
-    - id: 66
-      label: Charges financières
-      parent: 6
+      - id: 6181
+        label: Documentation générale
+        parent: 618
+      - id: 6182
+        label: Documentation technique
+        parent: 618
+      - id: 6183
+        label: Frais de colloques, séminaires, conférences
+        parent: 618
+    - id: 619
+      label: Rabais, remises, ristournes obtenus sur services extérieurs
+      parent: 61
+  - id: 62
+    label: Autres services extérieurs
+    parent: 6
+    description: |-
+      Les comptes 61 et 62 enregistrent les charges externes autres que les achats en provenance des tiers. Le grand nombre de catégories de charges constituant les charges externes a conduit à l'utilisation de deux comptes divisionnaires, 61 et 62.
+      Ces deux comptes sont généralement regroupés sur une même ligne au niveau du compte de résultat.
+    children:
+    - id: 621
+      label: Personnel exterieur à l'entreprise
+      parent: 62
+    - id: 622
+      label: Rémunérations d'intermédiaires et honoraires
+      parent: 62
       children:
-        - id: 661
-          label: Charges d'intérêts
-          parent: 66
-          children:
-            - id: 6611
-              label: Intérêts des emprunts et dettes
-              parent: 661
-            - id: 6615
-              label: Intérêts des comptes courants et des dépôts créditeurs
-              parent: 661
-            - id: 6616
-              label: Intérêts bancaires et sur opérations de financement
-              parent: 661
-            - id: 6618
-              label: Intérêts des autres dettes
-              parent: 661
-        - id: 664
-          label: Pertes sur créances liées à des participations
-          parent: 66
-        - id: 665
-          label: Moins-values sur titres de placement
-          parent: 66
-        - id: 666
-          label: Pertes de change
-          parent: 66
-        - id: 667
-          label: Moins-values sur instruments financiers et assimilés
-          parent: 66
-        - id: 668
-          label: Autres charges financières
-          parent: 66
-    - id: 67
-      label: Eléments extraordinaires (charges)
-      parent: 6
-    - id: 68
-      label: 'Dotations aux amortissements, provisions, pertes de valeur'
-      parent: 6
+      - id: 6221
+        label: Commissions et courtages sur achats
+        parent: 622
+      - id: 6222
+        label: Commissions et courtages sur ventes
+        parent: 622
+      - id: 6224
+        label: Rémunérations des transitaires
+        parent: 622
+      - id: 6225
+        label: Rémunérations d'affacturages
+        parent: 622
+      - id: 6226
+        label: Honoraires
+        parent: 622
+      - id: 6227
+        label: Frais d'actes et de contentieux
+        parent: 622
+      - id: 6228
+        label: Divers
+        parent: 622
+    - id: 623
+      label: Publicité, publication, relations publiques
+      parent: 62
       children:
-        - id: 681
-          label: Dotations - actifs non courants
-          parent: 68
-          children:
-            - id: 6811
-              label: >-
-                Dotations aux amortissements sur immobilisations incorporelles
-                et corporelles
-              parent: 681
-            - id: 6815
-              label: Dotations aux provisions et charges
-              parent: 681
-            - id: 6816
-              label: >-
-                Dotations aux pertes de valeur des immobilisations incorporelles
-                et corporelles
-              parent: 681
-        - id: 685
-          label: Dotations - actifs courants
-          parent: 68
-    - id: 69
-      label: Impôts sur les bénéfices
-      parent: 6
+      - id: 6231
+        label: Annonces et insértions
+        parent: 623
+      - id: 6232
+        label: Echantillons
+        parent: 623
+      - id: 6233
+        label: Foires et expositions
+        parent: 623
+      - id: 6234
+        label: Cadeaux à la clientèle
+        parent: 623
+      - id: 6235
+        label: Primes
+        parent: 623
+      - id: 6236
+        label: Catalogues et imprimés
+        parent: 623
+      - id: 6237
+        label: Publications
+        parent: 623
+      - id: 6238
+        label: Divers
+        parent: 623
+    - id: 624
+      label: Transports de biens et transports collectifs du personnel
+      parent: 62
       children:
-        - id: 692
-          label: Imposition différée actif
-          parent: 69
-        - id: 693
-          label: Imposition différée passif
-          parent: 69
-        - id: 695
-          label: >-
-            Impôts sur les bénéfices basés sur le résultat des activités
-            ordinaires
-          parent: 69
-        - id: 698
-          label: Autres impôts sur les résulats
-          parent: 69
+      - id: 6241
+        label: Transports sur achats
+        parent: 624
+      - id: 6242
+        label: Transports sur ventes
+        parent: 624
+      - id: 6243
+        label: Transports entre établissements ou chantiers
+        parent: 624
+      - id: 6244
+        label: Transports administratifs
+        parent: 624
+      - id: 6247
+        label: Transports collectifs du personnel
+        parent: 624
+      - id: 6248
+        label: Divers
+        parent: 624
+    - id: 625
+      label: Déplacements, missions et réceptions
+      parent: 62
+      children:
+      - id: 6251
+        label: Voyages et déplacements
+        parent: 625
+      - id: 6255
+        label: Frais de déménagements
+        parent: 625
+      - id: 6256
+        label: Missions
+        parent: 625
+      - id: 6257
+        label: Réceptions
+        parent: 625
+    - id: 626
+      label: Frais postaux et télécommunications
+      parent: 62
+      children:
+      - id: 6261
+        label: Affranchissement
+        parent: 626
+      - id: 6262
+        label: Redevances téléphoniques et télégrammes
+        parent: 626
+    - id: 627
+      label: Services bancaires et assimilés
+      parent: 62
+      children:
+      - id: 6271
+        label: Frais sur titres
+        parent: 627
+      - id: 6272
+        label: Commissions et frais sur émission d'emprunt
+        parent: 627
+      - id: 6275
+        label: Frais sur effets
+        parent: 627
+      - id: 6276
+        label: Location de coffres
+        parent: 627
+      - id: 6278
+        label: Autres frais et commissions sur prestations de services
+        parent: 627
+    - id: 628
+      label: Cotisations et divers
+      parent: 62
+    - id: 629
+      label: Rabais, remises, ristournes obtenus sur autres services extérieurs
+      parent: 62
+  - id: 63
+    label: Impôts, taxes et versements assimilés
+    parent: 6
+    description: |-
+      Les impôts, taxes et versements assimilés sont des charges correspondant :
+      • d'une part, à des versements obligatoires à l'Etat et aux collectivités locales pour subvenir aux dépenses publiques ;
+      • d'autre part, à des versements institués par l'autorité publique notamment pour le financement d'actions d'intérêt économique ou social.
+      L'impôt sur les bénéfices n'est pas comptabilisé sous ce poste : il est inscrit au compte 69 "Impôts sur les bénéfices et assimilés".
+    children:
+    - id: 631
+      label: Impôts, taxes et versements assimilés sur rémunérations
+      parent: 63
+    - id: 635
+      label: Autres impôts et taxes
+      parent: 63
+  - id: 64
+    label: Charges de personnel
+    parent: 6
+    description: |-
+      Les charges de personnel comprennent :
+      • les rémunérations du personnel, y compris les rémunérations allouées aux dirigeants sociaux ;
+      • les cotisations de Sécurité Sociale et de prévoyance, liées à ces rémunérations ;
+      • les autres charges sociales, telles que les œuvres sociales (cantines, comités d'entreprise) ;
+      • dans le cadre d'une entreprise individuelle, les charges sociales facultatives et obligatoires de l'exploitant.
+    children:
+    - id: 641
+      label: Rémunérations du personnel
+      parent: 64
+      children:
+      - id: 6411
+        label: Salaires, appointements
+        parent: 641
+      - id: 6412
+        label: Congés payés
+        parent: 641
+      - id: 6413
+        label: Primes et gratifications
+        parent: 641
+      - id: 6414
+        label: Indemnités et avantages divers
+        parent: 641
+      - id: 6415
+        label: Supplément familial
+        parent: 641
+    - id: 644
+      label: Rémunérations des dirigeants
+      parent: 64
+    - id: 645
+      label: Cotisations aux organismes sociaux
+      parent: 64
+    - id: 646
+      label: Charges sociales sur rémunérations des dirigeants
+      parent: 64
+    - id: 647
+      label: Autres charges sociales
+      parent: 64
+    - id: 648
+      label: Autres charges de personnel
+      parent: 64
+  - id: 65
+    label: Autres charges des activités ordinaires
+    parent: 6
+    description: |-
+      Les éléments par nature figurant dans ce compte sont réputés être constitutifs du résultat des activités ordinaires de l'entité.
+      Lors d'une sortie d'immobilisations, sont inscrits dans une subdivision de ce compte :
+      • au débit, la valeur brute des éléments d'actifs cédés ;
+      • au crédit, le montant des amortissements et pertes de valeurs desdits éléments.
+      Ce compte enregistre également :
+      • les redevances pour concessions, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires ;
+      • les rémunérations des administrateurs relatives à leur fonction ;
+      • les pertes sur créances irrécouvrables ;
+      • la quote-part de résultat sur opérations faites en commun ;
+      • les pénalités sur marché, les amendes fiscales ou pénales ;
+      • les moins-values dégagées lors d'une cession de titres immobilisés.
+    children:
+    - id: 651
+      label: Redevances pour concessions, brevets, licences, logiciels et valeurs similaires
+      parent: 65
+    - id: 652
+      label: Moins-values sur cessions d'actifs non courants
+      parent: 65
+    - id: 653
+      label: Jetons de présence
+      parent: 65
+    - id: 654
+      label: Pertes sur créances irrécouvrables
+      parent: 65
+    - id: 655
+      label: Quote-part de résultat sur opérations faites en commun
+      parent: 65
+    - id: 656
+      label: Amendes et pénalités, subventions accordées, dons et libéralités
+      parent: 65
+    - id: 657
+      label: Charges exceptionnelles de gestion courante
+      parent: 65
+    - id: 658
+      label: Autres charges de gestion courante
+      parent: 65
+  - id: 66
+    label: Charges financières
+    parent: 6
+    description: |-
+      Ce compte peut être subdivisé en fonction des besoins en information afin de faire apparaître la nature ou l'origine des charges :
+      • charges d'intérêts ;
+      • moins-values de cession sur instruments financiers ;
+      • moins-values sur titres de placement ;
+      • autres charges financières tels qu'amortissements des primes de remboursement, des primes d'émission et des frais accessoires sur émission d'emprunt.
+      Le compte " Charges d'intérêts " est débité de l'ensemble des intérêts se rapportant à la période comptable sur emprunts, dettes et opérations de financement (par exemple : escompte d'effets à recevoir en portefeuille). Le compte " Moins-values sur titres de placement " est débité en
+      contrepartie du solde du compte 50 :
+      • lors de la cession de titres de placement faisant apparaître des moins-values ;
+      • à la clôture de l'exercice, lorsque des titres de placement immédiatement négociables (évalués à la valeur de marché) font apparaître une moins value (moins value déterminée par différence entre la valeur comptable et la valeur de marché).
+      Le compte " Autres charges financières " comprend notamment à son débit :
+      • les moins-values de cession des instruments de trésorerie ;
+      • les moins-values entre valeur comptable et valeur de marché des instruments de trésorerie immédiatement négociables, évalués à ladite valeur de marché.
+    children:
+    - id: 661
+      label: Charges d'intérêts
+      parent: 66
+      children:
+      - id: 6611
+        label: Intérêts des emprunts et dettes
+        parent: 661
+      - id: 6615
+        label: Intérêts des comptes courants et des dépôts créditeurs
+        parent: 661
+      - id: 6616
+        label: Intérêts bancaires et sur opérations de financement
+        parent: 661
+      - id: 6618
+        label: Intérêts des autres dettes
+        parent: 661
+    - id: 664
+      label: Pertes sur créances liées à des participations
+      parent: 66
+    - id: 665
+      label: Moins-values sur titres de placement
+      parent: 66
+    - id: 666
+      label: Pertes de change
+      parent: 66
+    - id: 667
+      label: Moins-values sur instruments financiers et assimilés
+      parent: 66
+    - id: 668
+      label: Autres charges financières
+      parent: 66
+  - id: 67
+    label: Eléments extraordinaires (charges)
+    parent: 6
+    description: Le compte 67 " Eléments extraordinaires " ne doit être utilisé que dans des circonstances exceptionnelles pour l'enregistrement d'opérations extraordinaires correspondant à des cas de force majeure comme par exemple une expropriation ou une catastrophe naturelle imprévisibles. La nature et le montant de chaque élément extraordinaire doivent être indiqués séparément au niveau des états financiers.
+  - id: 68
+    label: Dotations aux amortissements, provisions, pertes de valeur
+    parent: 6
+    description: Les comptes 68 sont débités en contrepartie des comptes d'amortissements, de provisions ou de pertes de valeur concernées.
+    children:
+    - id: 681
+      label: Dotations - actifs non courants
+      parent: 68
+      children:
+      - id: 6811
+        label: Dotations aux amortissements sur immobilisations incorporelles et corporelles
+        parent: 681
+      - id: 6815
+        label: Dotations aux provisions et charges
+        parent: 681
+      - id: 6816
+        label: Dotations aux pertes de valeur des immobilisations incorporelles et corporelles
+        parent: 681
+    - id: 685
+      label: Dotations - actifs courants
+      parent: 68
+  - id: 69
+    label: Impôts sur les bénéfices
+    parent: 6
+    description: |-
+      Ce compte enregistre à son débit le montant dû au titre des bénéfices imposables et devant normalement rester à la charge de la société : impôts calculés sur le montant des bénéfices, impôts forfaitaires, supplément d'impôts liés aux distributions. Ce compte enregistre également la charge relative à la participation éventuelle (légale ou contractuelle) des salariés aux résultats de
+      l'entité.
+    children:
+    - id: 692
+      label: Imposition différée actif
+      parent: 69
+    - id: 693
+      label: Imposition différée passif
+      parent: 69
+    - id: 695
+      label: Impôts sur les bénéfices basés sur le résultat des activités ordinaires
+      parent: 69
+    - id: 698
+      label: Autres impôts sur les résulats
+      parent: 69
 - id: 7
   label: Comptes de produits
   parent: null
   children:
-    - id: 70
-      label: 'Ventes des produits fabriqués, marchandises, prestations'
-      parent: 7
+  - id: 70
+    label: Ventes des produits fabriqués, marchandises, prestations
+    parent: 7
+    description: |-
+      Les ventes sont enregistrées au crédit des comptes par nature, pour leur prix net de TVA collectée, déduction faite des rabais, remises et ristournes accordés.
+      En fonction des besoins de l'entité, les comptes de vente sont subdivisés pour distinguer par exemple :
+      • les groupes de produits ;
+      • les ventes à l'étranger et les ventes locales ;
+      • les cessions à prix coûtant ;
+      • les ventes au sein du groupe et les ventes hors groupe ;
+      • les ventes liées à l'activité principale et les produits liés à des activités annexes.
+      Les produits des activités annexes peuvent comprendre les produits des services exploités dans l'intérêt du personnel (restaurant, transport, logement…), des locations diverses, des mises à disposition de personnel, des frais de port ou autres frais accessoires facturés, des bonis sur reprises d'emballages consignés, des cessions d'approvisionnement,….
+    children:
+    - id: 701
+      label: Ventes de produits finis
+      parent: 70
+    - id: 702
+      label: Ventes de produits intermédiaires
+      parent: 70
+    - id: 703
+      label: Ventes de produits résiduels
+      parent: 70
+    - id: 704
+      label: Ventes de travaux
+      parent: 70
+    - id: 705
+      label: Ventes d'études
+      parent: 70
+    - id: 706
+      label: Ventes de prestations de services
+      parent: 70
+    - id: 707
+      label: Ventes de marchandises
+      parent: 70
+    - id: 708
+      label: Produits des activités annexes
+      parent: 70
       children:
-        - id: 701
-          label: Ventes de produits finis
-          parent: 70
-        - id: 702
-          label: Ventes de produits intermédiaires
-          parent: 70
-        - id: 703
-          label: Ventes de produits résiduels
-          parent: 70
-        - id: 704
-          label: Ventes de travaux
-          parent: 70
-        - id: 705
-          label: Ventes d'études
-          parent: 70
-        - id: 706
-          label: Ventes de prestations de services
-          parent: 70
-        - id: 707
-          label: Ventes de marchandises
-          parent: 70
-        - id: 708
-          label: Produits des activités annexes
-          parent: 70
-          children:
-            - id: 7082
-              label: Commissions et courtages
-              parent: 708
-            - id: 7083
-              label: Locations diverses
-              parent: 708
-            - id: 7084
-              label: Frais et accessoires refacturés
-              parent: 708
-            - id: 7086
-              label: Boni sur reprises d'emballages consignés
-              parent: 708
-            - id: 7088
-              label: Autres produits des activités annexes
-              parent: 708
-        - id: 709
-          label: 'Rabais, remises et ristournes accordés'
-          parent: 70
-          children:
-            - id: 7091
-              label: Ventes de produits finis
-              parent: 709
-            - id: 7092
-              label: Ventes de produits intérmédiaires
-              parent: 709
-            - id: 7094
-              label: Travaux
-              parent: 709
-            - id: 7095
-              label: Etudes
-              parent: 709
-            - id: 7096
-              label: Prestations de services
-              parent: 709
-            - id: 7097
-              label: Ventes de marchandises
-              parent: 709
-            - id: 7098
-              label: Produits des activités annexes
-              parent: 709
-    - id: 71
-      label: Production stockées (ou déstockage)
-      parent: 7
+      - id: 7082
+        label: Commissions et courtages
+        parent: 708
+      - id: 7083
+        label: Locations diverses
+        parent: 708
+      - id: 7084
+        label: Frais et accessoires refacturés
+        parent: 708
+      - id: 7086
+        label: Boni sur reprises d'emballages consignés
+        parent: 708
+      - id: 7088
+        label: Autres produits des activités annexes
+        parent: 708
+    - id: 709
+      label: Rabais, remises et ristournes accordés
+      parent: 70
       children:
-        - id: 713
-          label: Variations de stocks d'en-cours
-          parent: 71
-          children:
-            - id: 7133
-              label: Variations des en-cours de productions des biens
-              parent: 713
-            - id: 7135
-              label: Variations des stocks de produits
-              parent: 713
-        - id: 714
-          label: Variations des stocks de produits
-          parent: 71
-    - id: 72
-      label: Production immobilisée
-      parent: 7
+      - id: 7091
+        label: Ventes de produits finis
+        parent: 709
+      - id: 7092
+        label: Ventes de produits intérmédiaires
+        parent: 709
+      - id: 7094
+        label: Travaux
+        parent: 709
+      - id: 7095
+        label: Etudes
+        parent: 709
+      - id: 7096
+        label: Prestations de services
+        parent: 709
+      - id: 7097
+        label: Ventes de marchandises
+        parent: 709
+      - id: 7098
+        label: Produits des activités annexes
+        parent: 709
+  - id: 71
+    label: Production stockées (ou déstockage)
+    parent: 7
+    description: |-
+      Le compte 71 est réservé à l'enregistrement des variations de la production stockée. Les variations des stocks d'approvisionnement et de marchandises sont, pour leur part, portées au compte 603 " Variation des stocks (approvisionnements et marchandises) ".
+      Dans le cadre d'un inventaire intermittent, ces comptes de variation des stocks sont débités de la valeur de la production stockée initiale et crédités de la valeur de la production stockée finale. En conséquence,
+      le solde du compte 71 représente la variation globale de la production stockée (solde créditeur) ou déstockée (solde débiteur) entre le début et la fin de la période.
+      Les comptes 71 figurent en compte de résultat sous la rubrique “produits”.
+    children:
+    - id: 713
+      label: Variations de stocks d'en-cours
+      parent: 71
       children:
-        - id: 721
-          label: Production immobilisée d'actif incorporel
-          parent: 72
-        - id: 722
-          label: Production immobilisée d'actif corporel
-          parent: 72
-    - id: 74
-      label: Subventions d'exploitation
-      parent: 7
+      - id: 7133
+        label: Variations des en-cours de productions des biens
+        parent: 713
+      - id: 7135
+        label: Variations des stocks de produits
+        parent: 713
+    - id: 714
+      label: Variations des stocks de produits
+      parent: 71
+  - id: 72
+    label: Production immobilisée
+    parent: 7
+    description: |-
+      Ce compte enregistre au crédit le coût de production des éléments d'actif incorporel et des éléments d'actif corporel créés par l'entité et inscrits à l'actif non courant (les charges ayant été préalablement enregistrées dans les comptes par nature).
+      Ce compte enregistre aussi au crédit le montant des frais accessoires d'achat effectués par l'entité pour son compte propre (par exemple : transport, installation, montage effectués par l'entité au titre d'une immobilisation acquise).
+    children:
+    - id: 721
+      label: Production immobilisée d'actif incorporel
+      parent: 72
+    - id: 722
+      label: Production immobilisée d'actif corporel
+      parent: 72
+  - id: 74
+    label: Subventions d'exploitation
+    parent: 7
+    description: Ce compte est crédité du montant des subventions d'exploitation obtenues par l'entité par le débit du compte de tiers ou de trésorerie intéressé.
+    children:
+    - id: 741
+      label: Subventions d'équilibre
+      parent: 74
+    - id: 748
+      label: Autres subventions d'exploitation
+      parent: 74
+  - id: 75
+    label: Autres produits opérationnels
+    parent: 7
+    description: |-
+      Les éléments par nature figurant dans ces compte 75 sont réputés être constitutifs du résultat des activités ordinaires de l'entité. Lors d'une cession d'immobilisations autre que des titres, ce compte enregistre le montant, hors TVA collectée, du prix de cession des éléments d'actif cédés. Ce compte enregistre également au crédit :
+      • la quote-part des subventions d'investissement virée au résultat de l'exercice ;
+      • les redevances pour concessions, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires ;
+      • les rémunérations perçues par l'entité au titre de ses fonctions de direction (administrateur, gérant…) auprès d'autres entités du Groupe ;
+      • les revenus des immeubles non affectés à des activités professionnelles ;
+      • la quote-part de résultat sur opérations faites en commun ;
+      • les indemnités d'assurances reçues ;
+      • les dédits, pénalités, libéralités perçues ;
+      • les plus values dégagées lors d'une cession d'actifs non courants.
+    children:
+    - id: 751
+      label: Redevances pour concessions, brevets, licences, logiciels et valeurs
+      parent: 75
+    - id: 752
+      label: Plus-values sur cessions d'actifs non courants
+      parent: 75
+    - id: 753
+      label: Jetons de présence et rémunérations d'administrateurs ou de gérant
+      parent: 75
+    - id: 754
+      label: Quote-part de subventions d'investissement virées au résultat de l'exercice
+      parent: 75
+    - id: 755
+      label: Quote-part de résultat sur opérations faites en commun
+      parent: 75
+    - id: 756
+      label: Libéralités perçues, rentrées sur créances amorties
+      parent: 75
+    - id: 757
+      label: Produits exceptionnels sur opérations de gestion
+      parent: 75
+    - id: 758
+      label: Autres produits de gestion courant
+      parent: 75
+  - id: 76
+    label: Produits financiers
+    parent: 7
+    description: |-
+      Ce compte peut être subdivisé en fonction des besoins en information afin de faire apparaître la nature ou l'origine des produits :
+      • intérêts sur prêts ou créances ;
+      • plus-values de cession sur titres de placement ;
+      • plus-values constatées à la clôture de l'exercice entre valeur comptable et valeur de marché des titres de placement immédiatement négociables ;
+      • plus-values de cession des instruments de trésorerie ;
+      • plus-values constatées à la clôture de l'exercice entre valeur comptable et valeur de marché des instruments de trésorerie immédiatement négociables.
+    children:
+    - id: 761
+      label: Produits de participations
+      parent: 76
       children:
-        - id: 741
-          label: Subventions d'équilibre
-          parent: 74
-        - id: 748
-          label: Autres subventions d'exploitation
-          parent: 74
-    - id: 75
-      label: Autres produits opérationnels
-      parent: 7
+      - id: 7611
+        label: Revenus des titres de participation
+        parent: 761
+      - id: 7616
+        label: Revenus sur les autres formes de participations
+        parent: 761
+      - id: 7617
+        label: Revenus des créances rattachées à des participations
+        parent: 761
+    - id: 762
+      label: Produits des autres immobilisations financières
+      parent: 76
       children:
-        - id: 751
-          label: 'Redevances pour concessions, brevets, licences, logiciels et valeurs'
-          parent: 75
-        - id: 752
-          label: Plus-values sur cessions d'actifs non courants
-          parent: 75
-        - id: 753
-          label: Jetons de présence et rémunérations d'administrateurs ou de gérant
-          parent: 75
-        - id: 754
-          label: >-
-            Quote-part de subventions d'investissement virées au résultat de
-            l'exercice
-          parent: 75
-        - id: 755
-          label: Quote-part de résultat sur opérations faites en commun
-          parent: 75
-        - id: 756
-          label: 'Libéralités perçues, rentrées sur créances amorties'
-          parent: 75
-        - id: 757
-          label: Produits exceptionnels sur opérations de gestion
-          parent: 75
-        - id: 758
-          label: Autres produits de gestion courant
-          parent: 75
-    - id: 76
-      label: Produits financiers
-      parent: 7
+      - id: 7621
+        label: Revenus des titres immobilisés
+        parent: 762
+      - id: 7626
+        label: Revenus des prêts
+        parent: 762
+      - id: 7627
+        label: Revenus des créances immobilisées
+        parent: 762
+    - id: 763
+      label: Revenus des autres créances
+      parent: 76
+    - id: 764
+      label: Revenus et plus-values des valeurs mobilières de placement
+      parent: 76
+    - id: 766
+      label: Gains de change
+      parent: 76
+    - id: 767
+      label: Produits net sur cessions de valeurs mobilières de placement
+      parent: 76
+    - id: 768
+      label: Autres produits financiers
+      parent: 76
+  - id: 77
+    label: Eléments extraordinaires (produits)
+    parent: 7
+  - id: 78
+    label: Reprise sur provisions et pertes de valeur
+    parent: 7
+    description: Ces comptes sont crédités par le débit des comptes de provisions pour charges ou des comptes de perte de valeur concernés.
+    children:
+    - id: 781
+      label: Reprises d'exploitation - actifs non courants
+      parent: 78
       children:
-        - id: 761
-          label: Produits de participations
-          parent: 76
-          children:
-            - id: 7611
-              label: Revenus des titres de participation
-              parent: 761
-            - id: 7616
-              label: Revenus sur les autres formes de participations
-              parent: 761
-            - id: 7617
-              label: Revenus des créances rattachées à des participations
-              parent: 761
-        - id: 762
-          label: Produits des autres immobilisations financières
-          parent: 76
-          children:
-            - id: 7621
-              label: Revenus des titres immobilisés
-              parent: 762
-            - id: 7626
-              label: Revenus des prêts
-              parent: 762
-            - id: 7627
-              label: Revenus des créances immobilisées
-              parent: 762
-        - id: 763
-          label: Revenus des autres créances
-          parent: 76
-        - id: 764
-          label: Revenus et plus-values des valeurs mobilières de placement
-          parent: 76
-        - id: 766
-          label: Gains de change
-          parent: 76
-        - id: 767
-          label: Produits net sur cessions de valeurs mobilières de placement
-          parent: 76
-        - id: 768
-          label: Autres produits financiers
-          parent: 76
-    - id: 77
-      label: Eléments extraordinaires (produits)
-      parent: 7
-    - id: 78
-      label: Reprise sur provisions et pertes de valeur
-      parent: 7
-      children:
-        - id: 781
-          label: Reprises d'exploitation - actifs non courants
-          parent: 78
-          children:
-            - id: 7811
-              label: Reprises sur amortissements des immobilisations
-              parent: 781
-            - id: 7845
-              label: Reprises sur provisions pour charges
-              parent: 781
-            - id: 7846
-              label: >-
-                Reprises sur pertes de valeur des immobilisations incorporelles
-                et corporelles
-              parent: 781
-        - id: 785
-          label: Reprises d'exploitation - actifs courants
-          parent: 78
-        - id: 786
-          label: Reprises financières
-          parent: 78
+      - id: 7811
+        label: Reprises sur amortissements des immobilisations
+        parent: 781
+      - id: 7845
+        label: Reprises sur provisions pour charges
+        parent: 781
+      - id: 7846
+        label: Reprises sur pertes de valeur des immobilisations incorporelles et corporelles
+        parent: 781
+    - id: 785
+      label: Reprises d'exploitation - actifs courants
+      parent: 78
+    - id: 786
+      label: Reprises financières
+      parent: 78
