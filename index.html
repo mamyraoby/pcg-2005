@@ -162,16 +162,26 @@ dialog::backdrop{background:rgba(15,23,42,.5)}
 .copy.main:hover{background:var(--pd);border-color:var(--pd)}
 .copy .ci{display:inline-block}
 
-/* toast */
-#toast{
-  position:fixed;inset:auto auto calc(24px + env(safe-area-inset-bottom)) 50%;margin:0;border:0;
-  transform:translate(-50%,12px);opacity:0;pointer-events:none;
-  background:var(--t);color:var(--card);padding:11px 20px;border-radius:var(--r-md);
-  font-weight:600;font-size:.95rem;white-space:nowrap;
-  transition:opacity .18s ease,transform .18s ease;
+/* stacked, push-style copy notifications */
+#notifications{
+  position:fixed;z-index:9999;top:calc(20px + env(safe-area-inset-top));left:50%;right:auto;bottom:auto;
+  margin:0;display:flex;flex-direction:column;gap:10px;transform:translateX(-50%);
+  width:min(360px,calc(100vw - 32px));pointer-events:none;background:transparent;color:inherit;border:0;padding:0;overflow:visible;
 }
-#toast.bad{background:var(--bad);color:#fff}
-#toast.show{opacity:1;transform:translate(-50%,0)}
+#notifications:popover-open{position:fixed;top:calc(20px + env(safe-area-inset-top));left:50%;right:auto;bottom:auto;margin:0;transform:translateX(-50%)}
+.notification{
+  display:grid;grid-template-columns:38px minmax(0,1fr) 28px;align-items:start;gap:11px;
+  padding:14px;background:color-mix(in srgb,var(--card) 92%,transparent);color:var(--t);
+  border:1px solid color-mix(in srgb,var(--line) 85%,transparent);border-radius:14px;
+  box-shadow:0 8px 28px rgba(15,23,42,.2);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  opacity:0;transform:translateX(18px);transition:opacity .2s ease,transform .2s ease;
+}
+.notification.show{opacity:1;transform:translateX(0)}
+.notification-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:var(--ptint);color:var(--p);font-weight:800}
+.notification.error .notification-icon{background:color-mix(in srgb,var(--bad) 14%,var(--card));color:var(--bad)}
+.notification-title{font-size:.88rem;font-weight:750;line-height:1.3}
+.notification-detail{margin-top:3px;color:var(--m);font-size:.82rem;line-height:1.4;overflow-wrap:anywhere}
+.notification-close{border:0;background:transparent;color:var(--m);padding:2px;font-size:1.1rem;line-height:1}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
@@ -296,25 +306,36 @@ function renderDesc(text){
   flush();return html;
 }
 
-let toastEl,toastT;
-function toast(msg,bad){
-  if(!toastEl){
-    toastEl=document.createElement('div');toastEl.id='toast';toastEl.setAttribute('role','status');toastEl.setAttribute('aria-live','polite');
-    if('popover' in toastEl)toastEl.popover='manual';
-    document.body.appendChild(toastEl);
-  }
-  toastEl.textContent=msg;toastEl.classList.toggle('bad',!!bad);
-  try{if(toastEl.showPopover){toastEl.hidePopover();toastEl.showPopover()}}catch(_){}
-  toastEl.classList.remove('show');void toastEl.offsetWidth;toastEl.classList.add('show');
-  clearTimeout(toastT);
-  toastT=setTimeout(()=>{toastEl.classList.remove('show');try{toastEl.hidePopover&&toastEl.hidePopover()}catch(_){}},1600);
+let notificationStack;
+function notifyCopy(account,withDescription,success){
+  if(!notificationStack){notificationStack=document.createElement('div');notificationStack.id='notifications';if('popover' in notificationStack)notificationStack.popover='manual';document.body.appendChild(notificationStack)}
+  try{if(notificationStack.showPopover&&!notificationStack.matches(':popover-open'))notificationStack.showPopover()}catch(_){}
+  const card=document.createElement('div');card.className='notification'+(success?'':' error');
+  card.setAttribute('role','status');card.setAttribute('aria-live','polite');
+  const icon=document.createElement('div');icon.className='notification-icon';icon.textContent=success?'✓':'!';
+  const body=document.createElement('div');
+  const title=document.createElement('div');title.className='notification-title';title.textContent=success?'Copié':'Échec de la copie';
+  const detail=document.createElement('div');detail.className='notification-detail';
+  detail.textContent=account.code+' · '+account.label+(withDescription?' · avec description':'');
+  body.append(title,detail);
+  const close=document.createElement('button');close.className='notification-close';close.type='button';close.setAttribute('aria-label','Fermer la notification');close.textContent='×';
+  close.style.pointerEvents='auto';close.addEventListener('click',()=>dismissNotification(card));
+  card.append(icon,body,close);notificationStack.insertBefore(card,notificationStack.firstChild);
+  while(notificationStack.children.length>2){const oldest=notificationStack.lastElementChild;clearTimeout(oldest._dismissTimer);oldest.remove()}
+  requestAnimationFrame(()=>card.classList.add('show'));
+  const timer=setTimeout(()=>dismissNotification(card),4200);card._dismissTimer=timer;
+}
+function dismissNotification(card){
+  if(!card.isConnected)return;
+  clearTimeout(card._dismissTimer);card.classList.remove('show');
+  setTimeout(()=>{card.remove();if(notificationStack&&!notificationStack.children.length){try{notificationStack.hidePopover&&notificationStack.hidePopover()}catch(_){}}},220);
 }
 async function copyText(txt){
   let ok=true;
   try{await navigator.clipboard.writeText(txt)}catch(e){
     try{const t=document.createElement('textarea');t.value=txt;t.style.position='fixed';t.style.opacity=0;document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}catch(_){ok=false}
   }
-  toast(ok?'Copié':'Échec de la copie',!ok);
+  return ok;
 }
 function detail(c){
   const o=byId.get(c);if(!o)return;
@@ -338,9 +359,10 @@ function detail(c){
 }
 document.addEventListener('click',e=>{
   const cp=e.target.closest('[data-copy]');
-  if(cp){const o=byId.get(cp.dataset.c0);
-    if(cp.dataset.copy==='desc'){const ds=descOf(o);copyText(o.code+' - '+o.label+'\n\n'+ds.text)}
-    else copyText(o.code+' - '+o.label);
+  if(cp){const o=byId.get(cp.dataset.c0),withDescription=cp.dataset.copy==='desc';
+    const ds=withDescription?descOf(o):null;
+    const txt=withDescription?o.code+' - '+o.label+'\n\n'+ds.text:o.code+' - '+o.label;
+    copyText(txt).then(ok=>notifyCopy(o,withDescription,ok));
     return}
   const el=e.target.closest('[data-c]');if(!el)return;
   if(el.tagName==='SUMMARY'&&e.target.closest('summary')&&!e.target.closest('b')&&!e.shiftKey){return}
